@@ -1,0 +1,1 @@
+Count of non isomorphic graphs (of dim 2): 0
