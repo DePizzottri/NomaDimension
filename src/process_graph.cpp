@@ -32,7 +32,7 @@ ostream& operator << (ostream & out, ProcessesGraph const& g) {
     for (auto& s : g.syncs) {
         out << s.first << " " << s.second << endl;
     }
-    out << endl;
+    //out << endl;
 
     return out;
 }

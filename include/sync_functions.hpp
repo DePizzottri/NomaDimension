@@ -145,14 +145,15 @@ void f69_XX(ProcessesGraph & g) {
 }
 
 void f68_1(ProcessesGraph & g) {
-    //three two groups with 2 briges (1-2, 3-4)
+    //IS OK (LINE-GRID)
+    //three two-process groups (0,1) (2,3) (4,5) with 2 briges (0-2, 3-4)
     assert(g.proc_num == 6);
     //parallel sync
     g.sync(0, 1);
     g.sync(2, 3);
     g.sync(4, 5);
     //1 brige
-    g.sync(1, 2);
+    g.sync(0, 2);
     //2 brige
     g.sync(3, 4);
     //parallel sync
@@ -161,37 +162,177 @@ void f68_1(ProcessesGraph & g) {
     g.sync(4, 5);
 }
 
-void f68_2(ProcessesGraph & g) {
-    //three two groups with 3 briges (1-2, 1-4, 2-4)
-    assert(g.proc_num == 6);
+void f68_1_2(ProcessesGraph & g) {
+    //NOT OK (GROUP LINE-GRID)
+    //three two-process groups (0,1) (2,3) (4,5) with 3 briges (0-2, 0-4)
+    //assert(g.proc_num == 6);
     //parallel sync
     g.sync(0, 1);
-    g.sync(2, 3);
-    g.sync(4, 5);
-    //1 brige from (0,1) to (2,3)
     g.sync(1, 2);
-    //and fully sync(0,1) and (2,3)
-    g.sync(0, 1);
     g.sync(2, 3);
-    //2 brige from (0,1) to (4,5)
-    //g.sync(1, 4);
-    //and sync (4,5) and (0,1)
-    //g.sync(0, 1);
+    g.sync(3, 0);
+
+
     //g.sync(4, 5);
-
-    //3 brige from (2,3) to (4,5)
-    g.sync(2, 4);
-    g.sync(2, 3);
-    g.sync(4, 5);
-
-    //2 brige from (0,1) to (4,5)
-    //g.sync(1, 4);
-
+    //g.sync(5, 0);
+    //1 brige
+    //g.sync(1, 2);
+    //2 brige
+    //g.sync(3, 4);
+    //3 brige
+    //g.sync(5, 0);
     //parallel sync
     //g.sync(0, 1);
     //g.sync(2, 3);
     //g.sync(4, 5);
 }
 
+void f68_2_1(ProcessesGraph & g) {
+    //OK - group GRID
+    //three two-process groups (0,1) (2,3) (4,5), with 3 briges (0-2), (0-4), (0-2)
+    assert(g.proc_num == 6);
+    //parallel sync
+    g.sync(0, 1);
+    g.sync(2, 3);
+    g.sync(4, 5);
+    //1st brige from (0,1) to (2,3)
+    g.sync(0, 2);
+
+    //inner sync 1st group
+    g.sync(0, 1);
+    //g.sync(2, 3);
+
+    //2nd brige from (0,1) to (4,5)
+    g.sync(0, 4);
+
+    //inner sync 1st group
+    g.sync(0, 1);
+    //g.sync(4, 5);
+
+    //3rd brige from (0,1) to (2,3)
+    g.sync(0, 2);
+
+    g.sync(4, 5);
+    g.sync(2, 3);
+}
+
+//void f68_2_2(ProcessesGraph & g) {
+//    //NOT OK ???
+//    //three two-process groups (0,1) (2,3) (4,5), with 3 briges (0-2, 0-4, 2-4)
+//    assert(g.proc_num == 6);
+//    //parallel sync
+//    //g.sync(0, 1);
+//    //g.sync(2, 3);
+//    //g.sync(4, 5);
+//    //1st brige from (0,1) to (2,3)
+//
+//    //g.sync(0, 4);
+//    //g.sync(2, 4);
+//    //g.sync(0, 2);
+//
+//    //inner sync 1st and 2nd group
+//    //g.sync(0, 1);
+//    //g.sync(2, 3);
+//
+//    //2rd bridge
+//    //g.sync(2, 4);   
+//
+//    //g.sync(2, 3); 
+//    //g.sync(4, 5);
+//
+//    //3nd brige from (0,1) to (4,5)
+//    //g.sync(0, 4);
+//
+//    //g.sync(4, 5);
+//    //g.sync(0, 1);
+//
+//    //g.sync(0, 1);
+//    //g.sync(2, 3);
+//    //g.sync(4, 5);
+//
+//    vector<pair<int, int>> s = {
+//        { 0, 1 },
+//        { 0, 1 },
+//        { 0, 2 },
+//        { 0, 4 },
+//        { 2, 3 },
+//        { 2, 3 },
+//        { 2, 4 },
+//        { 4, 5 },
+//        { 4, 5 }
+//    };
+//
+//    //for (auto i = s.rbegin(); i != s.rend(); ++i)
+//    //    g.sync(i->first, i->second);
+//    //process_graph(g);
+//    do {
+//        auto ng = g;
+//        for (auto& p : s)
+//            ng.sync(p.first, p.second);
+//        process_graph(ng);
+//    } while (next_permutation(s.begin(), s.end()));
+//}
+
+void f68_3(ProcessesGraph & g) {
+    //NOT OK
+    //LINE-GRID - OK
+    //BUT OK IF "BAD"-3 group start from inner sync 
+    //two 3-process groupes (0,1,2) (3,4,5) with one bridge (0,3)
+    assert(g.proc_num == 6);
+    //full sync group 1
+    g.sync(0, 1);
+    g.sync(1, 2);
+    g.sync(0, 1);
+    //full sync group 2
+    g.sync(3, 5);
+    g.sync(4, 5);
+    g.sync(3, 4);
+
+    //bridge
+    g.sync(0, 3);
+
+    //full sync group 1
+    g.sync(1, 2);
+    g.sync(0, 1);
+    g.sync(0, 2);
+    ////full sync group 2
+    g.sync(4, 5);
+    g.sync(3, 5);
+    //g.sync(3, 4);
+}
+
+void f5_3_2(ProcessesGraph & g) {
+    //OK, if 3-group start from inner sync
+    //two 2-3-process groupes (0,1) (2,3,4) with one bridge (0,3)
+    assert(g.proc_num == 5);
+    //full sync group 1
+    g.sync(0, 1);
+    //full sync group 2
+    g.sync(3, 4);
+    g.sync(2, 3);
+    g.sync(2, 4);
+
+    //bridge
+    g.sync(0, 2);
+
+    //full sync group 1
+    g.sync(0, 1);
+    //full sync group 2
+    g.sync(3, 4);
+    g.sync(2, 3);
+    g.sync(2, 4);
+}
+
+void f6_2_2_2_g(ProcessesGraph & g) {
+    //2x3 grid (0,1) (2,3) (4,5) - (0,2,4) (1,3,5)
+    //three two-process groups, connects in 3x grid
+    //l-grid only
+
+    assert(g.proc_num == 6);
+    //full connect 3-p group 1
+    g.sync(0, 2);
+    g.sync(2, 4);
+    g.sync(0, 2);
+}
 
 #endif //NOMA_DIMENSION_SYNC_FUNCTIONS_INCLUDED

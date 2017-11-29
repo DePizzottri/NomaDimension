@@ -30,12 +30,8 @@ file(GLOB ${PROJECT_NAME}_INCLUDE_FILES
 
 include_directories("./include")
 
-add_executable(${PROJECT_NAME} ${${PROJECT_NAME}_SRC_FILES} ${${PROJECT_NAME}_INCLUDE_FILES})
+#include_directories("./app")
 
-if(WIN32)
-  target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES})
-else()
-  target_link_libraries(${PROJECT_NAME} jemalloc)
-  target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES})
-endif(WIN32)
+add_executable(common "./app/common.cpp" ${${PROJECT_NAME}_SRC_FILES} ${${PROJECT_NAME}_INCLUDE_FILES})
 
+add_executable(count_isomorphic "./app/count_isomorphic.cpp" ${${PROJECT_NAME}_SRC_FILES} ${${PROJECT_NAME}_INCLUDE_FILES})
