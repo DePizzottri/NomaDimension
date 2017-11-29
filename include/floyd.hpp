@@ -10,10 +10,10 @@ using namespace std;
 
 const auto INF = numeric_limits<int>::max() / 3;
 
-typedef int* incidence_matrix;
+typedef int* adjacency_matrix;
 
 //void floyd(int* matrix, int n, int threads = 4) {
-inline void floyd(incidence_matrix matrix, int n) {
+inline void floyd(adjacency_matrix matrix, int n) {
     for (int k = 0; k < n; ++k) {
 #pragma omp parallel for num_threads(4)
         for (int i = 0; i < n; ++i) {
@@ -29,7 +29,7 @@ inline void floyd(incidence_matrix matrix, int n) {
 }
 
 //void floyd_advance_vertex(int* matrix, int n, int v, int threads = 4) {
-inline void floyd_advance_vertex(incidence_matrix matrix, int n, int v) {
+inline void floyd_advance_vertex(adjacency_matrix matrix, int n, int v) {
     auto k = v;
     //for (int k = 0; k < n; ++k) {
 #pragma omp parallel for num_threads(4)
@@ -45,7 +45,7 @@ inline void floyd_advance_vertex(incidence_matrix matrix, int n, int v) {
     //}
 }
 
-//void print(incidence_matrix matrix, int n) {
+//void print(adjacency_matrix matrix, int n) {
 //    for (int v = 0; v < n; ++v) {
 //        for (int u = 0; u < n; ++u) {
 //            if (matrix[v*n + u] == INF) {
@@ -59,7 +59,7 @@ inline void floyd_advance_vertex(incidence_matrix matrix, int n, int v) {
 //    }
 //}
 
-inline incidence_matrix make_graph_matrix(ProcessesGraph const& g) {
+inline adjacency_matrix make_graph_matrix(ProcessesGraph const& g) {
     int n = (int)g.graph.size();
     auto matrix = new int[n * n];
 

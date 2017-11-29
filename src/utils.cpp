@@ -34,7 +34,7 @@ bool have_cycle(adjacency_list const& g) {
     return false;
 }
 
-bool check_if_critical(incidence_matrix matrix, int n, int x, int y) {
+bool check_if_critical(adjacency_matrix matrix, int n, int x, int y) {
     auto nm = new int[n * n];
     memcpy(nm, matrix, n * n * sizeof(int));
     nm[x*n + y] = 1;

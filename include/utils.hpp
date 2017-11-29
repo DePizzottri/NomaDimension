@@ -11,7 +11,7 @@ struct critical_pair {
     int y;
 };
 
-bool check_if_critical(incidence_matrix matrix, int n, int x, int y);
+bool check_if_critical(adjacency_matrix matrix, int n, int x, int y);
 
 bool is_bipartite(adjacency_list const& g);
 
