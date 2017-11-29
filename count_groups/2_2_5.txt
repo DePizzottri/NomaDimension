@@ -1,0 +1,22 @@
+Group size: 2
+Groups num: 2
+Sync num: 5
+Procsses num: 4
+Syncronizations: 
+0 1
+0 2
+2 3
+0 2
+0 1
+
+
+Procsses num: 4
+Syncronizations: 
+0 1
+2 3
+0 2
+0 1
+2 3
+
+
+Count of non isomorphic graphs (of dim 2): 2

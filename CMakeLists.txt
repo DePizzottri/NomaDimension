@@ -24,7 +24,13 @@ file(GLOB ${PROJECT_NAME}_SRC_FILES
     "src/*"
 )
 
-add_executable(${PROJECT_NAME} ${${PROJECT_NAME}_SRC_FILES})
+file(GLOB ${PROJECT_NAME}_INCLUDE_FILES
+    "include/*"
+)
+
+include_directories("./include")
+
+add_executable(${PROJECT_NAME} ${${PROJECT_NAME}_SRC_FILES} ${${PROJECT_NAME}_INCLUDE_FILES})
 
 if(WIN32)
   target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES})
