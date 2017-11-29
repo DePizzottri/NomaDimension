@@ -5,19 +5,12 @@ project(noma_dimention)
 if(WIN32)
   set(BOOST_ROOT_DIR "D:/lib/boost")
   include_directories(${BOOST_ROOT_DIR})
-  include_directories("C:/lib/json/src")
   link_directories("${BOOST_ROOT_DIR}/stage/lib")
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /Qvec-report:1 /openmp")
 else()
   message("Build for UNIX")
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Ofast -flto -funroll-loops -std=c++14 -march=native")
   set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -static -flto")
-  find_package("Boost" REQUIRED COMPONENTS system filesystem thread)
-  find_package("Threads")
-  include_directories(${Boost_INCLUDE_DIRS})
-  include_directories("../date")
-  include_directories("../rapidjson/include")
-  link_directories(${Boost_LIBRARY_DIRS})
 endif(WIN32)
 
 file(GLOB ${PROJECT_NAME}_SRC_FILES
@@ -30,8 +23,11 @@ file(GLOB ${PROJECT_NAME}_INCLUDE_FILES
 
 include_directories("./include")
 
-#include_directories("./app")
-
 add_executable(common "./app/common.cpp" ${${PROJECT_NAME}_SRC_FILES} ${${PROJECT_NAME}_INCLUDE_FILES})
 
-add_executable(count_isomorphic "./app/count_isomorphic.cpp" ${${PROJECT_NAME}_SRC_FILES} ${${PROJECT_NAME}_INCLUDE_FILES})
+add_executable(enumerate_isomorphic "./app/enumerate_isomorphic.cpp" ${${PROJECT_NAME}_SRC_FILES} ${${PROJECT_NAME}_INCLUDE_FILES})
+
+add_executable(generate_one_grouped "./app/generate_one_grouped.cpp" ${${PROJECT_NAME}_SRC_FILES} ${${PROJECT_NAME}_INCLUDE_FILES})
+
+add_executable(enumerate_grouped "./app/enumerate_grouped.cpp" ${${PROJECT_NAME}_SRC_FILES} ${${PROJECT_NAME}_INCLUDE_FILES})
+

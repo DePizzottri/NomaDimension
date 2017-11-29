@@ -125,11 +125,12 @@ void generate_graph(ProcessesGraph const& g, int max_sync_num, int sync_num) {
 }
 
 int main(int argc, char* argv[]) {
-    cout << "Count of isomorphic executions with" << endl;
+    cout << "Enumerate of isomorphic executions" << endl;
+
     if (argc < 3) {
-        cout << "usage: " << endl;
-        cout << "noma_dimention proc_num max_sync_num" << endl;
-        return 0;
+        cerr << "usage: " << endl;
+        cerr << "enumerate_isomorphic proc_num max_sync_num" << endl;
+        return EXIT_FAILURE;
     }
 
     int proc_num = atoi(argv[1]);
@@ -152,4 +153,6 @@ int main(int argc, char* argv[]) {
         }
         cout << endl;
     }
+
+    return EXIT_SUCCESS;
 }
