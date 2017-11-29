@@ -49,6 +49,7 @@ bool check_if_critical(adjacency_matrix matrix, int n, int x, int y) {
                 continue;
             }
             if (matrix[v*n + u] == INF && nm[v*n + u] != INF) {
+                delete[] nm;
                 return false;
             }
         }
