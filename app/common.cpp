@@ -60,7 +60,7 @@ bool check_cpg(ProcessesGraph const& pg, adjacency_list const& g, vector<critica
         return false;
     }
     else {
-        cout << "OK: incompatible critical pair graph is bipartite!" << endl;
+        //cout << "OK: incompatible critical pair graph is bipartite!" << endl;
         //cout << pg << endl;
         bool iso = false;
         //for (auto& p : result_processes) {
@@ -81,7 +81,8 @@ bool check_cpg(ProcessesGraph const& pg, adjacency_list const& g, vector<critica
             //isov.push_back({ pg });
             iso_count.push_back(1);
             result_processes.push_back(pg);
-            cout << pg << endl;
+            if (is_full_syncronized(pg))
+                cout << pg << endl;
         }
         else {
             //vector<int> idxs;
@@ -283,11 +284,19 @@ int main(int argc, char* argv[]) {
     vector<pair<int, int>> s = {
         { 0, 1 },
         { 0, 1 },
+
         { 0, 2 },
+        { 0, 2 },
+
         { 0, 4 },
+        { 0, 4 },
+
         { 2, 3 },
         { 2, 3 },
+
         { 2, 4 },
+        { 2, 4 },
+
         { 4, 5 },
         { 4, 5 }
     };
