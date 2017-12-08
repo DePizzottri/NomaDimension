@@ -1,0 +1,29 @@
+Enumerate all grouped executions
+Group size: 2
+Groups num: 3
+Sync num: 10
+Procsses num: 6
+Syncronizations:
+0 4
+0 1
+0 4
+2 3
+4 5
+2 4
+2 3
+4 5
+0 4
+0 1
+
+Procsses num: 6
+Syncronizations:
+0 4
+0 1
+0 4
+4 5
+2 4
+2 3
+2 4
+4 5
+0 4
+0 1
