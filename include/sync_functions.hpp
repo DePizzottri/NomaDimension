@@ -323,16 +323,77 @@ void f5_3_2(ProcessesGraph & g) {
     g.sync(2, 4);
 }
 
-void f6_2_2_2_g(ProcessesGraph & g) {
-    //2x3 grid (0,1) (2,3) (4,5) - (0,2,4) (1,3,5)
-    //three two-process groups, connects in 3x grid
-    //l-grid only
+void f6_2_2_2_1g(ProcessesGraph & g) {
+    //2õ2õ2 1st good execution
 
     assert(g.proc_num == 6);
-    //full connect 3-p group 1
-    g.sync(0, 2);
+    
+    g.sync(2, 3);
+    g.sync(0, 1);
+    g.sync(0, 4);
+    g.sync(4, 5);
     g.sync(2, 4);
-    g.sync(0, 2);
+    g.sync(4, 5);
+    g.sync(0, 4);
+    g.sync(0, 1);
+    g.sync(2, 3);
+}
+
+void f6_2_2_2_2g(ProcessesGraph & g) {
+    //2õ2õ2 2nd good execution
+
+    assert(g.proc_num == 6);
+
+    g.sync(0, 1);
+    g.sync(0, 4);
+    g.sync(4, 5);
+    g.sync(2, 4);
+    g.sync(2, 3);
+    g.sync(2, 4);
+    g.sync(4, 5);
+    g.sync(0, 4);
+    g.sync(0, 1);
+}
+
+void f6_2_2_2_2g2(ProcessesGraph & g) {
+    //2x3x2 pyramid
+    assert(g.proc_num == 12);
+
+    int off = 6;
+    //1st : 0 1 2 3 4 5
+    //2nd : 6 7 8 9 10 11
+
+    //sync 1st to 2 (wo 3)
+    g.sync(0, 1);
+    g.sync(0, 4);
+    g.sync(4, 5);
+    g.sync(2, 4);
+    g.sync(2, 3);
+
+    //sync 2nd to 2+off
+    g.sync(0 + off, 1 + off);
+    g.sync(0 + off, 4 + off);
+    g.sync(4 + off, 5 + off);
+    g.sync(2 + off, 4 + off);
+    g.sync(2 + off, 3 + off);
+
+    //sync 1st & 2nd
+    g.sync(2, 2 + off);
+
+    //spread in 1st
+    g.sync(2, 3);
+    g.sync(2, 4);
+    g.sync(4, 5);
+    g.sync(0, 4);
+    g.sync(0, 1);
+
+    //spread in 2st
+    g.sync(2 + off, 3 + off);
+    g.sync(2 + off, 4 + off);
+    g.sync(4 + off, 5 + off);
+    g.sync(0 + off, 4 + off);
+    g.sync(0 + off, 1 + off);
+
 }
 
 #endif //NOMA_DIMENSION_SYNC_FUNCTIONS_INCLUDED
