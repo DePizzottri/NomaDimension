@@ -211,3 +211,35 @@ bool is_isomorphic(ProcessesGraph const& pgl, ProcessesGraph const& pgr) {
 
     return isomorphic;
 }
+
+bool network_have_cut_vertice(ProcessesGraph const& pg) {
+    vector<bool> used(pg.network.size(), false);
+    vector<int> tin(pg.network.size()), fup(pg.network.size());
+    int timer = 0;
+
+    bool have_cut_vertice = false;
+
+    function<void(int, int)> dfs = [&](int v, int p) {
+        used[v] = true;
+        tin[v] = fup[v] = timer++;
+        int children = 0;
+        for(auto& to: pg.network[v]) {
+            if (to == p)  continue;
+            if (used[to])
+                fup[v] = min(fup[v], tin[to]);
+            else {
+                dfs(to, v);
+                fup[v] = min(fup[v], fup[to]);
+                if (fup[to] >= tin[v] && p != -1)
+                    have_cut_vertice = true;
+                ++children;
+            }
+        }
+        if (p == -1 && children > 1)
+            have_cut_vertice = true;
+    };
+
+    dfs(0, -1);
+
+    return have_cut_vertice;
+}

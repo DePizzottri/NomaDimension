@@ -5,7 +5,7 @@
 #include <ostream>
 #include <cassert>
 #include <iomanip>
-
+#include <unordered_set>
 
 using namespace std;
 
@@ -27,6 +27,8 @@ public:
     vector<vector<int>> graph;
     vector<int> proc_last_vertex;
     int next_vertex;
+
+    vector<unordered_set<int>> network;
     
     vector<Label> labels;
 
@@ -61,6 +63,9 @@ public:
 
             //graph[zero_vertex].push_back(cur_vert);
         }
+
+        network.clear();
+        network.resize(proc_num);
     }
 
     void update(int proc) {
@@ -114,6 +119,9 @@ public:
 
         labels.push_back({ proc1, labels[p1].num + 1 });
         labels.push_back({ proc2, labels[p2].num + 1 });
+
+        network[proc1].insert(proc2);
+        network[proc2].insert(proc1);
     }
 
 private:
