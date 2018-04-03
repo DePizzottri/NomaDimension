@@ -48,7 +48,7 @@ bool check_cpg(ProcessesGraph const& pg, adjacency_list const& g, vector<critica
     if (!is_bipartite(icg)) {
         //cout << endl;
         //cout << "=================================" << endl;
-        //cout << "WARNING: incompatible critical pair graph is NOT bipartite!" << endl;
+        cout << "WARNING: incompatible critical pair graph is NOT bipartite!" << endl;
         //cout <<  pg << endl;
         //cout << "Critical pairs:" << endl;
         //for (int i = 0; i < cp.size(); ++i) { 
@@ -60,7 +60,7 @@ bool check_cpg(ProcessesGraph const& pg, adjacency_list const& g, vector<critica
         return false;
     }
     else {
-        //cout << "OK: incompatible critical pair graph is bipartite!" << endl;
+        cout << "OK: incompatible critical pair graph is bipartite!" << endl;
         //cout << pg << endl;
         bool iso = false;
         //for (auto& p : result_processes) {
@@ -81,8 +81,8 @@ bool check_cpg(ProcessesGraph const& pg, adjacency_list const& g, vector<critica
             //isov.push_back({ pg });
             iso_count.push_back(1);
             result_processes.push_back(pg);
-            if (is_full_syncronized(pg))
-                cout << pg << endl;
+            //if (is_full_syncronized(pg))
+            //    cout << pg << endl;
         }
         else {
             //vector<int> idxs;
@@ -273,49 +273,38 @@ int main(int argc, char* argv[]) {
     //process_graph(g);
 
     //ProcessesGraph g;
-    //g.init(4);
-    ////for (auto i : {1,2,3,4,5}) {
-    //    //f5XXX(g);
-    //    f68_1_2(g);
+    //g.init(12);
+    //for (auto i : {1,2,3,4,5}) {
+    //    f6_2_2_2_2g2(g);
     //    process_graph(g);
     //    cout << is_full_syncronized(g) << endl;
-    ////}
+    //}
 
-    vector<pair<int, int>> s = {
-        { 0, 1 },
-        { 0, 1 },
-
-        { 0, 2 },
-        { 0, 2 },
-
-        { 0, 4 },
-        { 0, 4 },
-
-        { 2, 3 },
-        { 2, 3 },
-
-        { 2, 4 },
-        { 2, 4 },
-
-        { 4, 5 },
-        { 4, 5 }
-    };
-    
-    //for (auto i = s.rbegin(); i != s.rend(); ++i)
-    //    g.sync(i->first, i->second);
-    //process_graph(g);
-
-    ProcessesGraph g;
-    g.init(6);
-    int count = 0;
-    do {
-        auto ng = g;
-        for (auto& p : s)
-            ng.sync(p.first, p.second);
-        process_graph(ng);
-        if (count++ % 1000 == 0)
-            cout << count << endl;
-    } while (next_permutation(s.begin(), s.end()));
+    //vector<pair<int, int>> s = {
+    //    { 0, 1 },
+    //    { 0, 1 },
+    //    { 0, 2 },
+    //    { 0, 2 },
+    //    { 0, 4 },
+    //    { 0, 4 },
+    //    { 2, 3 },
+    //    { 2, 3 },
+    //    { 2, 4 },
+    //    { 2, 4 },
+    //    { 4, 5 },
+    //    { 4, 5 }
+    //};    
+    //ProcessesGraph g;
+    //g.init(6);
+    //int count = 0;
+    //do {
+    //    auto ng = g;
+    //    for (auto& p : s)
+    //        ng.sync(p.first, p.second);
+    //    process_graph(ng);
+    //    if (count++ % 1000 == 0)
+    //        cout << count << endl;
+    //} while (next_permutation(s.begin(), s.end()));
 
     return 0;
 }

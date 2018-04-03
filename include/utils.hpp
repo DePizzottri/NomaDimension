@@ -19,6 +19,7 @@ bool is_full_syncronized(ProcessesGraph const& g);
 
 bool is_isomorphic(ProcessesGraph const& pgl, ProcessesGraph const& pgr);
 
+//O(V+E)
 bool network_have_cut_vertice(ProcessesGraph const& pg);
 
 #endif //NOMA_DIMENSION_utils_INCLUDED

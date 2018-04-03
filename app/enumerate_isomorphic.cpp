@@ -8,6 +8,8 @@
 vector<ProcessesGraph> result_processes;
 vector<int> iso_count;
 
+int out_count = 0;
+
 bool check_cpg(ProcessesGraph const& pg, adjacency_list const& g, vector<critical_pair> const& cp) {
     //cout << "Graph size: " << pg.graph.size() << endl;
     adjacency_list icg(cp.size());
@@ -69,7 +71,10 @@ bool check_cpg(ProcessesGraph const& pg, adjacency_list const& g, vector<critica
             iso_count.push_back(1);
             result_processes.push_back(pg);
 
-            cout << pg << endl;
+            cout << "-" << out_count++ << "-" << endl;
+            cout << pg;
+            cout << "Result network has cut vertice: "<< std::boolalpha << network_have_cut_vertice(pg) << endl;
+            cout << endl;
         }
 
         return true;
@@ -125,7 +130,7 @@ void generate_graph(ProcessesGraph const& g, int max_sync_num, int sync_num) {
 }
 
 int main(int argc, char* argv[]) {
-    cout << "Enumerate of isomorphic executions" << endl;
+    cout << "Enumerate of isomorphic executions of N processes and N syncronizations" << endl;
 
     if (argc < 3) {
         cerr << "usage: " << endl;

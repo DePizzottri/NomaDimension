@@ -26,7 +26,7 @@ ostream& operator << (ostream & out, ProcessesGraph const& g) {
     //    out << endl;
     //}
 
-    out << "Procsses num: " << g.proc_num << endl;
+    out << "Processes num: " << g.proc_num << endl;
     out << "Syncronizations: " << endl;
 
     for (auto& s : g.syncs) {

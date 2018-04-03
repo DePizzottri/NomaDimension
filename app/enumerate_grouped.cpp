@@ -123,7 +123,7 @@ bool process_graph(ProcessesGraph const& g) {
     //cout << "Critical pairs: "<<endl;
     for (int v = 0; v < n; ++v) {
         for (int u = 0; u < n; ++u) {
-            if (matrix[v*n + u] == INF && matrix[u*n + v] == INF) {
+            if (matrix[v*n + u] == INF || matrix[u*n + v] == INF) {
 
                 if (check_if_critical(matrix, n, v, u)) {
                     //print(matrix, n);
@@ -146,7 +146,7 @@ void generate_grouped_graph(ProcessesGraph const& g, int group_size, int group_n
     auto proc_num = g.proc_num;
 
     if (sync_num <= 0) {
-        if (is_full_syncronized(g)) {
+        if (is_full_syncronized(g) && !network_have_cut_vertice(g)) {
             process_graph(g);
             return;
         }
@@ -154,17 +154,16 @@ void generate_grouped_graph(ProcessesGraph const& g, int group_size, int group_n
         return;
     }
 
-    auto group_leaders = [&] {
-        unordered_set<int> ret;
-        for (int i = 0; i < proc_num; i += group_size) {
-            ret.insert(i);
-        }
+    //auto group_leaders = [&] {
+    //    unordered_set<int> ret;
+    //    for (int i = 0; i < proc_num; i += group_size) {
+    //        ret.insert(i);
+    //    }
 
-        return ret;
-    }();
+    //    return ret;
+    //}();
 
     for (int p1 = 0; p1 < proc_num; ++p1) {
-
         auto ingroup_processes = [&] {
             vector<int> ret;
 
@@ -175,19 +174,30 @@ void generate_grouped_graph(ProcessesGraph const& g, int group_size, int group_n
             return ret;
         }();
 
-        if (group_leaders.find(p1) != group_leaders.end()) {
-            for (auto p2 : group_leaders) {
+        //if (group_leaders.find(p1) != group_leaders.end()) { //p1 is group leader
+        //    for (auto p2 : group_leaders) { //sync with others group leaders
+        //        auto ng = g;
+        //        if (p2 != p1) {
+        //            ng.sync(p1, p2);
+        //            generate_grouped_graph(ng, group_size, group_num, sync_num - 1);
+        //        }
+        //    }
+        //}
+
+        //sync in group
+        for (auto p2 : ingroup_processes) {
+            if (p2 != p1) {
                 auto ng = g;
-                if (p2 != p1) {
-                    ng.sync(p1, p2);
-                    generate_grouped_graph(ng, group_size, group_num, sync_num - 1);
-                }
+                ng.sync(p1, p2);
+                generate_grouped_graph(ng, group_size, group_num, sync_num - 1);
             }
         }
 
-        for (auto p2 : ingroup_processes) {
-            auto ng = g;
-            if (p2 != p1) {
+        //sync by divisibility by group size
+        for (int i = 0; i < group_num; ++i) {
+            auto p2 = (p1 + i*group_size) % (group_size*group_num);
+            if (p1 != p2) {
+                auto ng = g;
                 ng.sync(p1, p2);
                 generate_grouped_graph(ng, group_size, group_num, sync_num - 1);
             }
@@ -196,7 +206,7 @@ void generate_grouped_graph(ProcessesGraph const& g, int group_size, int group_n
 }
 
 int main(int argc, char* argv[]) {
-    cout << "Enumerate all grouped executions" << endl;
+    cout << "Enumerate all grouped executions (div intergroup, network cut vertice)" << endl;
 
     if (argc < 3) {
         cerr << "usage: " << endl;

@@ -29,3 +29,5 @@ add_executable(enumerate_isomorphic "./app/enumerate_isomorphic.cpp" ${${PROJECT
 add_executable(generate_one_grouped "./app/generate_one_grouped.cpp" ${${PROJECT_NAME}_SRC_FILES} ${${PROJECT_NAME}_INCLUDE_FILES})
 
 add_executable(enumerate_grouped "./app/enumerate_grouped.cpp" ${${PROJECT_NAME}_SRC_FILES} ${${PROJECT_NAME}_INCLUDE_FILES})
+
+add_executable(check_poset "./app/check_poset.cpp" ${${PROJECT_NAME}_SRC_FILES} ${${PROJECT_NAME}_INCLUDE_FILES})
