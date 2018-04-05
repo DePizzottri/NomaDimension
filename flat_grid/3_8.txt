@@ -1,0 +1,1322 @@
+Generate flat grid
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+0 1
+0 1
+0 1
+0 1
+1 2
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+0 1
+0 1
+0 1
+1 2
+0 1
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+0 1
+0 1
+0 1
+1 2
+0 1
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+0 1
+0 1
+0 1
+1 2
+1 2
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+0 1
+0 1
+1 2
+0 1
+0 1
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+0 1
+0 1
+1 2
+0 1
+0 1
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+0 1
+0 1
+1 2
+0 1
+1 2
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+0 1
+0 1
+1 2
+0 1
+1 2
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+0 1
+0 1
+1 2
+1 2
+0 1
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+0 1
+0 1
+1 2
+1 2
+0 1
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+0 1
+0 1
+1 2
+1 2
+1 2
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+0 1
+1 2
+0 1
+0 1
+0 1
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+0 1
+1 2
+0 1
+0 1
+0 1
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+0 1
+1 2
+0 1
+0 1
+1 2
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+0 1
+1 2
+0 1
+0 1
+1 2
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+0 1
+1 2
+0 1
+1 2
+0 1
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+0 1
+1 2
+0 1
+1 2
+0 1
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+0 1
+1 2
+0 1
+1 2
+1 2
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+0 1
+1 2
+0 1
+1 2
+1 2
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+0 1
+1 2
+1 2
+0 1
+0 1
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+0 1
+1 2
+1 2
+0 1
+0 1
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+0 1
+1 2
+1 2
+0 1
+1 2
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+0 1
+1 2
+1 2
+0 1
+1 2
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+0 1
+1 2
+1 2
+1 2
+0 1
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+0 1
+1 2
+1 2
+1 2
+0 1
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+0 1
+1 2
+1 2
+1 2
+1 2
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+1 2
+0 1
+0 1
+0 1
+0 1
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+1 2
+0 1
+0 1
+0 1
+0 1
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+1 2
+0 1
+0 1
+0 1
+1 2
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+1 2
+0 1
+0 1
+0 1
+1 2
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+1 2
+0 1
+0 1
+1 2
+0 1
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+1 2
+0 1
+0 1
+1 2
+0 1
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+1 2
+0 1
+0 1
+1 2
+1 2
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+1 2
+0 1
+0 1
+1 2
+1 2
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+1 2
+0 1
+1 2
+0 1
+0 1
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+1 2
+0 1
+1 2
+0 1
+0 1
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+1 2
+0 1
+1 2
+0 1
+1 2
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+1 2
+0 1
+1 2
+0 1
+1 2
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+1 2
+0 1
+1 2
+1 2
+0 1
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+1 2
+0 1
+1 2
+1 2
+0 1
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+1 2
+0 1
+1 2
+1 2
+1 2
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+1 2
+0 1
+1 2
+1 2
+1 2
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+1 2
+1 2
+0 1
+0 1
+0 1
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+1 2
+1 2
+0 1
+0 1
+0 1
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+1 2
+1 2
+0 1
+0 1
+1 2
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+1 2
+1 2
+0 1
+0 1
+1 2
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+1 2
+1 2
+0 1
+1 2
+0 1
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+1 2
+1 2
+0 1
+1 2
+0 1
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+1 2
+1 2
+0 1
+1 2
+1 2
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+1 2
+1 2
+0 1
+1 2
+1 2
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+1 2
+1 2
+1 2
+0 1
+0 1
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+1 2
+1 2
+1 2
+0 1
+0 1
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+1 2
+1 2
+1 2
+0 1
+1 2
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+1 2
+1 2
+1 2
+0 1
+1 2
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+1 2
+1 2
+1 2
+1 2
+0 1
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+1 2
+1 2
+1 2
+1 2
+0 1
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+0 1
+1 2
+1 2
+1 2
+1 2
+1 2
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+0 1
+0 1
+0 1
+0 1
+0 1
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+0 1
+0 1
+0 1
+0 1
+0 1
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+0 1
+0 1
+0 1
+0 1
+1 2
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+0 1
+0 1
+0 1
+0 1
+1 2
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+0 1
+0 1
+0 1
+1 2
+0 1
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+0 1
+0 1
+0 1
+1 2
+0 1
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+0 1
+0 1
+0 1
+1 2
+1 2
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+0 1
+0 1
+0 1
+1 2
+1 2
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+0 1
+0 1
+1 2
+0 1
+0 1
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+0 1
+0 1
+1 2
+0 1
+0 1
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+0 1
+0 1
+1 2
+0 1
+1 2
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+0 1
+0 1
+1 2
+0 1
+1 2
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+0 1
+0 1
+1 2
+1 2
+0 1
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+0 1
+0 1
+1 2
+1 2
+0 1
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+0 1
+0 1
+1 2
+1 2
+1 2
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+0 1
+0 1
+1 2
+1 2
+1 2
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+0 1
+1 2
+0 1
+0 1
+0 1
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+0 1
+1 2
+0 1
+0 1
+0 1
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+0 1
+1 2
+0 1
+0 1
+1 2
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+0 1
+1 2
+0 1
+0 1
+1 2
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+0 1
+1 2
+0 1
+1 2
+0 1
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+0 1
+1 2
+0 1
+1 2
+0 1
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+0 1
+1 2
+0 1
+1 2
+1 2
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+0 1
+1 2
+0 1
+1 2
+1 2
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+0 1
+1 2
+1 2
+0 1
+0 1
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+0 1
+1 2
+1 2
+0 1
+0 1
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+0 1
+1 2
+1 2
+0 1
+1 2
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+0 1
+1 2
+1 2
+0 1
+1 2
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+0 1
+1 2
+1 2
+1 2
+0 1
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+0 1
+1 2
+1 2
+1 2
+0 1
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+0 1
+1 2
+1 2
+1 2
+1 2
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+0 1
+1 2
+1 2
+1 2
+1 2
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+1 2
+0 1
+0 1
+0 1
+0 1
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+1 2
+0 1
+0 1
+0 1
+0 1
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+1 2
+0 1
+0 1
+0 1
+1 2
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+1 2
+0 1
+0 1
+0 1
+1 2
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+1 2
+0 1
+0 1
+1 2
+0 1
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+1 2
+0 1
+0 1
+1 2
+0 1
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+1 2
+0 1
+0 1
+1 2
+1 2
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+1 2
+0 1
+0 1
+1 2
+1 2
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+1 2
+0 1
+1 2
+0 1
+0 1
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+1 2
+0 1
+1 2
+0 1
+0 1
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+1 2
+0 1
+1 2
+0 1
+1 2
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+1 2
+0 1
+1 2
+0 1
+1 2
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+1 2
+0 1
+1 2
+1 2
+0 1
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+1 2
+0 1
+1 2
+1 2
+0 1
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+1 2
+0 1
+1 2
+1 2
+1 2
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+1 2
+0 1
+1 2
+1 2
+1 2
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+1 2
+1 2
+0 1
+0 1
+0 1
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+1 2
+1 2
+0 1
+0 1
+0 1
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+1 2
+1 2
+0 1
+0 1
+1 2
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+1 2
+1 2
+0 1
+0 1
+1 2
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+1 2
+1 2
+0 1
+1 2
+0 1
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+1 2
+1 2
+0 1
+1 2
+0 1
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+1 2
+1 2
+0 1
+1 2
+1 2
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+1 2
+1 2
+0 1
+1 2
+1 2
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+1 2
+1 2
+1 2
+0 1
+0 1
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+1 2
+1 2
+1 2
+0 1
+0 1
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+1 2
+1 2
+1 2
+0 1
+1 2
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+1 2
+1 2
+1 2
+0 1
+1 2
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+1 2
+1 2
+1 2
+1 2
+0 1
+0 1
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+1 2
+1 2
+1 2
+1 2
+0 1
+1 2
+
+Processes num: 3
+Syncronizations: 
+0 1
+1 2
+1 2
+1 2
+1 2
+1 2
+1 2
+0 1
+
+Count of nonisomorphic executions: 120
