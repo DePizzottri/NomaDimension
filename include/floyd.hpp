@@ -15,7 +15,7 @@ typedef int* adjacency_matrix;
 //void floyd(int* matrix, int n, int threads = 4) {
 inline void floyd(adjacency_matrix matrix, int n) {
     for (int k = 0; k < n; ++k) {
-#pragma omp parallel for num_threads(4)
+//#pragma omp parallel for num_threads(4)
         for (int i = 0; i < n; ++i) {
             auto v = matrix[i*n + k];
             for (int j = 0; j < n; ++j) {
@@ -32,7 +32,7 @@ inline void floyd(adjacency_matrix matrix, int n) {
 inline void floyd_advance_vertex(adjacency_matrix matrix, int n, int v) {
     auto k = v;
     //for (int k = 0; k < n; ++k) {
-#pragma omp parallel for num_threads(4)
+//#pragma omp parallel for num_threads(4)
     for (int i = 0; i < n; ++i) {
         auto v = matrix[i*n + k];
         for (int j = 0; j < n; ++j) {
