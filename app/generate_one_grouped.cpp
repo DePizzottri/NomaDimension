@@ -7,83 +7,15 @@
 
 #include <unordered_set>
 
-bool check_cpg(ProcessesGraph const& pg, adjacency_list const& g, vector<critical_pair> const& cp) {
-    //cout << "Graph size: " << pg.graph.size() << endl;
-    adjacency_list icg(cp.size());
-
-    for (int i = 0; i < cp.size(); ++i) {
-        for (int j = i + 1; j < cp.size(); ++j) {
-            auto cp1 = cp[i];
-            auto cp2 = cp[j];
-
-            auto lg = g;
-            lg[cp1.y].push_back(cp1.x);
-            lg[cp2.y].push_back(cp2.x);
-
-            //cout << i << " " << j << endl << lg << endl;
-
-            if (have_cycle(lg)) {
-                //cout << "Cycle" << endl;
-                icg[i].push_back(j);
-                icg[j].push_back(i);
-            }
-        }
-    }
-
-    if (!is_bipartite(icg)) {
-        return false;
-    }
-    else {
-        return true;
-    }
-}
-
-bool process_graph(ProcessesGraph const& g) {
-    //cout << "*"<<flush;
-    //cout << "================================" << endl;
-    //cout << g << endl;
-
-    //prepare graph matrix
-
-    auto matrix = make_graph_matrix(g);
-
-    //calc (weighted) transitive closure
-    int n = (int)g.graph.size();
-    floyd(matrix, n);
-
-    //find all critical pairs
-    vector<critical_pair> critical_pairs;
-    //cout << "Critical pairs: "<<endl;
-    for (int v = 0; v < n; ++v) {
-        for (int u = 0; u < n; ++u) {
-            if (matrix[v*n + u] == INF && matrix[u*n + v] == INF) {
-
-                if (check_if_critical(matrix, n, v, u)) {
-                    //print(matrix, n);
-                    //print(nm, n);
-                    critical_pairs.push_back({ v, u });
-                    //cout << g.labels[v].proc << " (" << v << "," << u << ") " << g.labels[u].proc << endl;
-                }
-            }
-        }
-    }
-
-    delete[] matrix;
-
-    return check_cpg(g, g.graph, critical_pairs);
-
-    //cout << "================================" << endl;
-}
-
 bool generate_one_graph(ProcessesGraph const& g, int group_size, int group_num, int sync_num) {
     auto proc_num = g.proc_num;
 
-    if (!process_graph(g))
+    if (!is_poset_2_dimensional(g))
         return false;
 
     if (sync_num <= 0) {
         if (is_full_syncronized(g)) {
-            if (process_graph(g)) {
+            if (is_poset_2_dimensional(g)) {
                 cout << g << endl;
                 return true;
             }
