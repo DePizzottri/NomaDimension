@@ -14,16 +14,26 @@ int out_count = 0;
 void generate_grouped_graph(ProcessesGraph const& g, int group_size, int group_num, int sync_num) {
     auto proc_num = g.proc_num;
 
+    hash<ProcessesGraph> hsh;
+
+    unordered_set<hash<ProcessesGraph>::result_type> cache;
+
+    if (cache.find(hsh(g)) != cache.end()) {
+        return;
+    }
+
+    auto iso_gs = generate_all_isomorphic(g);
+
+    for (auto& iso_g : iso_gs) {
+        cache.insert(hsh(iso_g));
+    }
+
     if (sync_num <= 0) {
         if (is_full_syncronized(g) && !network_have_cut_vertice(g)) {
             if (is_poset_2_dimensional(g)) {
                 bool iso = false;
-                //for (auto& p : result_processes) {
                 for (int i = 0; i<result_processes.size(); ++i) {
                     auto& p = result_processes[i];
-                    //if (is_isomorphic(p, pg) != is_isomorphic(pg, p)) {
-                    //    cout << "ERR" << endl;
-                    //}
 
                     if (is_isomorphic(p, g)) {
                         iso_count[i]++;
@@ -48,14 +58,14 @@ void generate_grouped_graph(ProcessesGraph const& g, int group_size, int group_n
         return;
     }
 
-    //auto group_leaders = [&] {
-    //    unordered_set<int> ret;
-    //    for (int i = 0; i < proc_num; i += group_size) {
-    //        ret.insert(i);
-    //    }
+    auto group_leaders = [&] {
+        unordered_set<int> ret;
+        for (int i = 0; i < proc_num; i += group_size) {
+            ret.insert(i);
+        }
 
-    //    return ret;
-    //}();
+        return ret;
+    }();
 
     for (int p1 = 0; p1 < proc_num; ++p1) {
         auto ingroup_processes = [&] {
@@ -68,15 +78,15 @@ void generate_grouped_graph(ProcessesGraph const& g, int group_size, int group_n
             return ret;
         }();
 
-        //if (group_leaders.find(p1) != group_leaders.end()) { //p1 is group leader
-        //    for (auto p2 : group_leaders) { //sync with others group leaders
-        //        auto ng = g;
-        //        if (p2 != p1) {
-        //            ng.sync(p1, p2);
-        //            generate_grouped_graph(ng, group_size, group_num, sync_num - 1);
-        //        }
-        //    }
-        //}
+        if (group_leaders.find(p1) != group_leaders.end()) { //p1 is group leader
+            for (auto p2 : group_leaders) { //sync with others group leaders
+                auto ng = g;
+                if (p2 != p1) {
+                    ng.sync(p1, p2);
+                    generate_grouped_graph(ng, group_size, group_num, sync_num - 1);
+                }
+            }
+        }
 
         //sync in group
         for (auto p2 : ingroup_processes) {
@@ -88,19 +98,19 @@ void generate_grouped_graph(ProcessesGraph const& g, int group_size, int group_n
         }
 
         //sync by divisibility by group size
-        for (int i = 0; i < group_num; ++i) {
-            auto p2 = (p1 + i*group_size) % (group_size*group_num);
-            if (p1 != p2) {
-                auto ng = g;
-                ng.sync(p1, p2);
-                generate_grouped_graph(ng, group_size, group_num, sync_num - 1);
-            }
-        }
+        //for (int i = 0; i < group_num; ++i) {
+        //    auto p2 = (p1 + i*group_size) % (group_size*group_num);
+        //    if (p1 != p2) {
+        //        auto ng = g;
+        //        ng.sync(p1, p2);
+        //        generate_grouped_graph(ng, group_size, group_num, sync_num - 1);
+        //    }
+        //}
     }
 }
 
 int main(int argc, char* argv[]) {
-    cout << "Enumerate all grouped executions (div intergroup, network cut vertice)" << endl;
+    cout << "Enumerate all grouped executions (network cut vertice) (with unbounded cache optimization)" << endl;
 
     if (argc < 3) {
         cerr << "usage: " << endl;
