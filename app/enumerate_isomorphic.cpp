@@ -108,15 +108,15 @@ int main(int argc, char* argv[]) {
 
     generate_graph(queue, g, atoi(argv[2]), 0);
 
-    {
-        lock_guard<mutex> lock(out_mut);
-        cout << "Count of non isomorphic graphs (of dim 2): " << out_count << " isomorphic count: " << iso_count << endl;
-    }
-
     stopped = true;
 
     for (auto& t : threads)
         t.join();
+
+    {
+        lock_guard<mutex> lock(out_mut);
+        cout << "Count of non isomorphic graphs (of dim 2): " << out_count << " isomorphic count: " << iso_count << endl;
+    }
 
     return EXIT_SUCCESS;
 }
