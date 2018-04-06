@@ -31,3 +31,5 @@ add_executable(generate_one_grouped "./app/generate_one_grouped.cpp" ${${PROJECT
 add_executable(enumerate_grouped "./app/enumerate_grouped.cpp" ${${PROJECT_NAME}_SRC_FILES} ${${PROJECT_NAME}_INCLUDE_FILES})
 
 add_executable(check_poset "./app/check_poset.cpp" ${${PROJECT_NAME}_SRC_FILES} ${${PROJECT_NAME}_INCLUDE_FILES})
+
+add_executable(generate_flat_grid "./app/generate_flat_grid.cpp" ${${PROJECT_NAME}_SRC_FILES} ${${PROJECT_NAME}_INCLUDE_FILES})
