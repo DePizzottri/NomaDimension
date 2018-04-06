@@ -6,14 +6,18 @@
 #include <utils.hpp>
 #include <unordered_set>
 #include <set>
+#include <mutex>
 
-int out_count = 0;
+#include <job_managment.h>
 
+atomic_int out_count = 0;
+atomic_int iso_count = 0;
 unordered_set<hash<ProcessesGraph>::result_type> cache;
-
 vector<ProcessesGraph> result_processes;
+mutex rpmut;
+mutex out_mut;
 
-void generate_graph(ProcessesGraph const& g, int max_sync_num, int sync_num) {
+void generate_graph(Queue & queue, ProcessesGraph const& g, int max_sync_num, int sync_num) {
     if (sync_num > max_sync_num) {
         return;
     }
@@ -31,25 +35,37 @@ void generate_graph(ProcessesGraph const& g, int max_sync_num, int sync_num) {
     }
 
     if (is_full_syncronized(g)) {
-        if (is_poset_2_dimensional(g)) {
-            bool iso = false;
-            for (int i = 0; i<result_processes.size(); ++i) {
-                auto& p = result_processes[i];
-                if (is_isomorphic(p, g)) {
-                    iso = true;
-                    break;
+        Job job = [rp = result_processes, g]{
+            if (is_poset_2_dimensional(g)) {
+                bool iso = false;
+                for (int i = 0; i < rp.size(); ++i) {
+                    auto& p = rp[i];
+                    if (is_isomorphic(p, g)) {
+                        iso = true;
+                        iso_count++;
+                        break;
+                    }
+                }
+
+                if (!iso) {
+                    {
+                        //TODO: may dublicate
+                        lock_guard<mutex> lock(rpmut);
+                        result_processes.push_back(g);
+                    }
+
+                    {
+                        lock_guard<mutex> lock(out_mut);
+                        cout << "-" << out_count++ << "-" << endl;
+                        cout << g;
+                        cout << "Result network has cut vertice: " << std::boolalpha << network_have_cut_vertice(g) << endl;
+                        cout << endl;
+                    }
                 }
             }
+        };
 
-            if (!iso) {
-                result_processes.push_back(g);
-
-                cout << "-" << out_count++ << "-" << endl;
-                cout << g;
-                cout << "Result network has cut vertice: " << std::boolalpha << network_have_cut_vertice(g) << endl;
-                cout << endl;
-            }
-        }
+        queue.enqueue(job);
         return;
     }
 
@@ -58,13 +74,13 @@ void generate_graph(ProcessesGraph const& g, int max_sync_num, int sync_num) {
         for (int p2 = p1 + 1; p2 < proc_num; ++p2) {
             auto ng = g;
             ng.sync(p1, p2);
-            generate_graph(ng, max_sync_num, sync_num + 1);
+            generate_graph(queue, ng, max_sync_num, sync_num + 1);
         }
     }
 }
 
 int main(int argc, char* argv[]) {
-    cout << "Enumerate of isomorphic executions of N processes and K syncronizations (with unbounded cache optimization)" << endl;
+    cout << "Enumerate of isomorphic executions of N processes and K syncronizations (with unbounded cache opt) (with job queue opt)" << endl;
 
     if (argc < 3) {
         cerr << "usage: " << endl;
@@ -78,32 +94,29 @@ int main(int argc, char* argv[]) {
 
     cout << "Processes num: " << proc_num << endl;
 
-    generate_graph(g, atoi(argv[2]), 0);
+    atomic_bool stopped = false;
+    vector<thread> threads;
 
-    cout << "Count of non isomorphic graphs (of dim 2): " << out_count << endl;
+    Queue queue;
+    for (int i = 0; i < 3; ++i)
+        threads.emplace_back(
+            thread([&queue, &stopped] {
+                consumer(queue, stopped);
+            })
+        );
 
-    //ProcessesGraph a, b;
-    //a.init(4);
-    //b.init(4);
 
-    //a.sync(0, 1);
-    //a.sync(2, 3);
-    //a.sync(0, 2);
-    //a.sync(0, 1);
-    //a.sync(2, 3);
-    //
-    //b.sync(0, 1);
-    //b.sync(2, 3);
-    //b.sync(0, 2);
-    //b.sync(2, 3);
-    //b.sync(0, 1);
+    generate_graph(queue, g, atoi(argv[2]), 0);
 
-    //for (auto& c : generate_all_isomorphic(a)) {
-    //    hash<ProcessesGraph> h;
-    //    //cout << c << endl;
-    //    //cout << boolalpha << (h(c) == h(b)) << endl;
-    //    cout << boolalpha << is_isomorphic(c, b) << endl;
-    //}
+    {
+        lock_guard<mutex> lock(out_mut);
+        cout << "Count of non isomorphic graphs (of dim 2): " << out_count << " isomorphic count: " << iso_count << endl;
+    }
+
+    stopped = true;
+
+    for (auto& t : threads)
+        t.join();
 
     return EXIT_SUCCESS;
 }

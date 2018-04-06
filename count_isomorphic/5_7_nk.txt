@@ -1,4 +1,4 @@
-Enumerate of isomorphic executions
+Enumerate of isomorphic executions of N processes and K syncronizations (with unbounded cache optimization)
 Processes num: 5
 -0-
 Processes num: 5
@@ -480,3 +480,4 @@ Syncronizations:
 2 4
 Result network has cut vertice: false
 
+Count of non isomorphic graphs (of dim 2): 40
