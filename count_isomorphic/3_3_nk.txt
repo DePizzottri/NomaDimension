@@ -1,0 +1,21 @@
+Enumerate of isomorphic executions
+Processes num: 3
+-0-
+Processes num: 3
+Syncronizations: 
+0 1
+0 2
+0 1
+Result network has cut vertice: true
+
+-1-
+Processes num: 3
+Syncronizations: 
+0 1
+0 2
+1 2
+Result network has cut vertice: false
+
+Count of non isomorphic graphs (of dim 2): 2
+Graphs with additional symmetricity (0-based indeces):
+
