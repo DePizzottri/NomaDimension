@@ -19,4 +19,4 @@ void consumer(Queue & q, atomic_bool & stopped) {
     }
 }
 
-#endif NOMA_DIMENSION_job_management_INCLUDED
+#endif// NOMA_DIMENSION_job_management_INCLUDED

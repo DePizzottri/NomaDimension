@@ -10,8 +10,8 @@
 
 #include <job_managment.h>
 
-atomic_int out_count = 0;
-atomic_int iso_count = 0;
+atomic_int out_count{0};
+atomic_int iso_count{0};
 unordered_set<hash<ProcessesGraph>::result_type> cache;
 vector<ProcessesGraph> result_processes;
 mutex rpmut;
@@ -94,7 +94,7 @@ int main(int argc, char* argv[]) {
 
     cout << "Processes num: " << proc_num << endl;
 
-    atomic_bool stopped = false;
+    atomic_bool stopped{false};
     vector<thread> threads;
 
     Queue queue;
