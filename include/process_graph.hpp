@@ -147,6 +147,42 @@ private:
 
 ostream& operator << (ostream & out, ProcessesGraph const& g);
 
+// custom specialization of std::hash can be injected in namespace std
+namespace std
+{
+    //took from boost::functional
+    inline void hash_combine(uint64_t& h, uint64_t k) {
+        const uint64_t m = UINT64_C(0xc6a4a7935bd1e995);
+        const int r = 47;
+
+        k *= m;
+        k ^= k >> r;
+        k *= m;
+
+        h ^= k;
+        h *= m;
+
+        h += 0xe6546b64;
+    }
+
+
+    template<> struct hash<ProcessesGraph>
+    {
+        typedef ProcessesGraph argument_type;
+        typedef std::size_t result_type;
+        result_type operator()(argument_type const& s) const noexcept
+        {
+            result_type ret = 0;
+            for (auto& sync : s.syncs) {
+                hash_combine(ret, sync.first);
+                hash_combine(ret, sync.second);
+            }
+
+            return ret;
+        }
+    };
+}
+
 //void draw(ProcessesGraph const& g) {
 //    int factor = 4;
 //    int proc_num = g.proc_num;

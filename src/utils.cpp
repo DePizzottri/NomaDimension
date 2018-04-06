@@ -215,6 +215,28 @@ bool is_isomorphic(ProcessesGraph const& pgl, ProcessesGraph const& pgr) {
     return isomorphic;
 }
 
+vector<ProcessesGraph> generate_all_isomorphic(ProcessesGraph const& pg) {
+    vector<int> perm;
+
+    for (int i = 0; i < pg.proc_num; ++i) {
+        perm.push_back(i);
+    }
+
+    vector<ProcessesGraph> ret;
+    do {
+        ProcessesGraph npg;
+        npg.init(pg.proc_num);
+        
+        for (auto& sync : pg.syncs) {
+            npg.sync((min)(perm[sync.first], perm[sync.second]), (max)(perm[sync.first], perm[sync.second]));
+        }
+
+        ret.push_back(npg);
+    } while (next_permutation(perm.begin(), perm.end()));
+
+    return ret;
+}
+
 bool network_have_cut_vertice(ProcessesGraph const& pg) {
     vector<bool> used(pg.network.size(), false);
     vector<int> tin(pg.network.size()), fup(pg.network.size());

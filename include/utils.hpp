@@ -19,6 +19,8 @@ bool is_full_syncronized(ProcessesGraph const& g);
 
 bool is_isomorphic(ProcessesGraph const& pgl, ProcessesGraph const& pgr);
 
+vector<ProcessesGraph> generate_all_isomorphic(ProcessesGraph const& pg);
+
 //O(V+E)
 bool network_have_cut_vertice(ProcessesGraph const& pg);
 
