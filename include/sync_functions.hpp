@@ -3,6 +3,21 @@
 
 #include <process_graph.hpp>
 
+//3 process sync
+void f33_1(ProcessesGraph & g, int offs = 0) {
+    assert(g.proc_num == 3 + offs);
+    g.sync(0 + offs, 1 + offs);
+    g.sync(0 + offs, 2 + offs);
+    g.sync(0 + offs, 1 + offs);
+}
+
+void f33_2(ProcessesGraph & g, int offs = 0) {
+    assert(g.proc_num == 3 + offs);
+    g.sync(0 + offs, 1 + offs);
+    g.sync(0 + offs, 2 + offs);
+    g.sync(1 + offs, 2 + offs);
+}
+
 //4 process executions with its number
 
 void f45_10(ProcessesGraph & g) {
@@ -12,6 +27,15 @@ void f45_10(ProcessesGraph & g) {
     g.sync(0, 2);
     g.sync(0, 3);
     g.sync(1, 2);
+}
+
+void f45_10_p(ProcessesGraph & g, vector<int> const& perm) {
+    assert(g.proc_num == 4);
+    g.sync(perm[0], perm[1]);
+    g.sync(perm[2], perm[3]);
+    g.sync(perm[0], perm[2]);
+    g.sync(perm[0], perm[3]);
+    g.sync(perm[1], perm[2]);
 }
 
 void f45_9(ProcessesGraph & g) {
@@ -79,13 +103,13 @@ void f45_5(ProcessesGraph & g) {
     g.sync(1, 2);
 }
 
-void f45_4(ProcessesGraph & g) {
+void f45_4(ProcessesGraph & g, int offs = 0) {
     assert(g.proc_num == 4);
-    g.sync(0, 1);
-    g.sync(0, 2);
-    g.sync(2, 3);
-    g.sync(0, 2);
-    g.sync(0, 1);
+    g.sync(0 + offs, 1 + offs);
+    g.sync(0 + offs, 2 + offs);
+    g.sync(2 + offs, 3 + offs);
+    g.sync(0 + offs, 2 + offs);
+    g.sync(0 + offs, 1 + offs);
 }
 
 void f45_3(ProcessesGraph & g) {
@@ -128,6 +152,56 @@ void f57_36(ProcessesGraph & g) {
     g.sync(3, 4);
 }
 
+void f57_that_one(ProcessesGraph & g) {
+    assert(g.proc_num == 5);
+    g.sync(0, 1);
+    g.sync(1, 2);
+    g.sync(3, 4);
+    g.sync(2, 3);
+    g.sync(1, 3);
+    g.sync(0, 3);
+    g.sync(2, 4);
+}
+
+void f57_that_one_p(ProcessesGraph & g, vector<int> const& p) {
+    assert(g.proc_num == 5);
+    g.sync(p[0], p[1]);
+    g.sync(p[1], p[2]);
+    g.sync(p[3], p[4]);
+    g.sync(p[2], p[3]);
+    g.sync(p[1], p[3]);
+    g.sync(p[0], p[3]);
+    g.sync(p[2], p[4]);
+}
+
+//6-process executions with its number
+void f69_179(ProcessesGraph & g) {
+    assert(g.proc_num == 6);
+    g.sync(0, 1);
+    g.sync(0, 2);
+    g.sync(3, 4);
+    g.sync(3, 5);
+    g.sync(2, 5);
+    g.sync(0, 5);
+    g.sync(1, 5);
+    g.sync(2, 3);
+    g.sync(2, 4);
+}
+
+void f69_179_p(ProcessesGraph & g, vector<int> const& p) {
+    assert(g.proc_num == 6);
+    g.sync(p[0], p[1]);
+    g.sync(p[0], p[2]);
+    g.sync(p[3], p[4]);
+    g.sync(p[3], p[5]);
+    g.sync(p[2], p[5]);
+    g.sync(p[0], p[5]);
+    g.sync(p[1], p[5]);
+    g.sync(p[2], p[3]);
+    g.sync(p[2], p[4]);
+
+}
+
 //grouped executions
 
 void f69_XX(ProcessesGraph & g) {
@@ -146,6 +220,7 @@ void f69_XX(ProcessesGraph & g) {
 
 void f68_1(ProcessesGraph & g) {
     //IS OK (LINE-GRID)
+    //BUT NOT SYNCED
     //three two-process groups (0,1) (2,3) (4,5) with 2 briges (0-2, 3-4)
     assert(g.proc_num == 6);
     //parallel sync
@@ -187,7 +262,7 @@ void f68_1_2(ProcessesGraph & g) {
     //g.sync(4, 5);
 }
 
-void f68_2_1(ProcessesGraph & g) {
+void f610_2_1(ProcessesGraph & g) {
     //OK - group GRID
     //three two-process groups (0,1) (2,3) (4,5), with 3 briges (0-2), (0-4), (0-2)
     assert(g.proc_num == 6);

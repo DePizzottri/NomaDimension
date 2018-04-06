@@ -1,11 +1,11 @@
 #include <process_graph.hpp>
 
-ostream & operator<<(ostream & out, Label const& l) {
+ostream& operator<<(ostream & out, Label const& l) {
     out << "[" << l.proc << ", " << l.num << "]";
     return out;
 }
 
-ostream & operator<<(ostream & out, adjacency_list& g) {
+ostream& operator<<(ostream & out, adjacency_list& g) {
     for (int v = 0; v < g.size(); ++v) {
         out << setw(2) << v << ": ";
         for (int i = 0; i < g[v].size(); ++i) {
@@ -16,7 +16,7 @@ ostream & operator<<(ostream & out, adjacency_list& g) {
     return out;
 }
 
-ostream& operator << (ostream & out, ProcessesGraph const& g) {
+ostream& operator<<(ostream & out, ProcessesGraph const& g) {
     //out << "Proc = " << g.proc_num << " verteces = " << g.graph.size() << endl;
     //for (int v = 0; v < g.graph.size(); ++v) {
     //    out << setw(2) << v << ": " << g.labels[v] << " -- ";
