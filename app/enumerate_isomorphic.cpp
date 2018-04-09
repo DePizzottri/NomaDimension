@@ -4,68 +4,118 @@
 #include <floyd.hpp>
 #include <sync_functions.hpp>
 #include <utils.hpp>
-#include <unordered_set>
-#include <set>
-#include <mutex>
 
-#include <job_managment.h>
+#include <boost/multi_index_container.hpp>
+#include <boost/multi_index/hashed_index.hpp>
+#include <boost/multi_index/ordered_index.hpp>
+#include <boost/multi_index/identity.hpp>
+#include <boost/multi_index/member.hpp>
 
-atomic_int out_count{0};
-atomic_int iso_count{0};
-unordered_set<hash<ProcessesGraph>::result_type> cache;
+#include <boost/fiber/all.hpp>
+
+namespace bf = boost::fibers;
+
+using allocator_type = boost::fibers::fixedsize_stack;
+
+//const uint32_t max_cache_size =   1000000; //~100Mb
+//const uint32_t max_cache_size =   10000000; //~800Mb
+const uint32_t max_cache_size =     100000000; //~
+
+atomic_int out_count{ 0 };
+atomic_int iso_count{ 0 };
+atomic_int fork_count{ 0 };
+
+//unordered_set<hash<ProcessesGraph>::result_type> cache;
+
+struct CacheEntry{
+    hash<ProcessesGraph>::result_type   hash;
+    uint32_t time;
+};
+
+atomic_uint32_t current_time = 0;
+
+typedef boost::multi_index_container<
+    CacheEntry,
+    boost::multi_index::indexed_by<
+        boost::multi_index::hashed_unique<BOOST_MULTI_INDEX_MEMBER(CacheEntry, hash<ProcessesGraph>::result_type, hash)>,
+        boost::multi_index::ordered_unique<BOOST_MULTI_INDEX_MEMBER(CacheEntry, uint32_t, time), std::less<uint32_t>>
+    >
+> cache_t;
+
+cache_t cache;
+
+
 vector<ProcessesGraph> result_processes;
-mutex rpmut;
-mutex out_mut;
+bf::mutex cache_mut;
+bf::mutex rp_mut;
+bf::mutex out_mut;
 
-void generate_graph(Queue & queue, ProcessesGraph const& g, int max_sync_num, int sync_num) {
+void generate_graph(allocator_type & salloc, ProcessesGraph g, int max_sync_num, int sync_num) {
     if (sync_num > max_sync_num) {
         return;
     }
 
     hash<ProcessesGraph> hsh;
+    {
+        lock_guard<bf::mutex> lock(cache_mut);
 
-    if (cache.find(hsh(g)) != cache.end()) {
-        return;
+        //if (cache.find(hsh(g)) != cache.end()) {
+        if(cache.get<0>().find(hsh(g)) != cache.get<0>().end()) {
+            return;
+        }
     }
 
     auto iso_gs = generate_all_isomorphic(g);
+    
+    {
+        lock_guard<bf::mutex> lock(cache_mut);
 
-    for (auto& iso_g: iso_gs) {
-        cache.insert(hsh(iso_g));
+        if (cache.size() + iso_gs.size() > max_cache_size) {
+            auto& time_idx = cache.get<1>();
+            for (int i = 0; i < iso_gs.size(); ++i) {
+                time_idx.erase(time_idx.begin());
+            }
+        }
+
+        for (auto& iso_g : iso_gs) {
+            cache.insert({ hsh(iso_g), current_time++ });
+        }
     }
 
     if (is_full_syncronized(g)) {
-        Job job = [rp = result_processes, g]{
-            if (is_poset_2_dimensional(g)) {
-                bool iso = false;
-                for (int i = 0; i < rp.size(); ++i) {
-                    auto& p = rp[i];
-                    if (is_isomorphic(p, g)) {
-                        iso = true;
-                        iso_count++;
-                        break;
+        //bf::fiber{
+        //    bf::launch::dispatch,
+        //    [rp = result_processes, g = std::move(g)]() {
+                if (is_poset_2_dimensional(g)) {
+                    bool iso = false;
+                    for (int i = 0; i < result_processes.size(); ++i) {
+                        auto& p = result_processes[i];
+                        if (is_isomorphic(p, g)) {
+                            iso = true;
+                            iso_count++;
+                            break;
+                        }
+                    }
+
+                    if (!iso) {
+                        {
+                            //TODO: there are dublicates may appear
+                            lock_guard<bf::mutex> lock(rp_mut);
+                            result_processes.push_back(g);
+                        }
+
+                        {
+                            lock_guard<bf::mutex> lock(out_mut);
+                            cout << "-" << out_count++ << "-" << endl;
+                            cout << g;
+                            cout << "Result network has cut vertice: " << std::boolalpha << network_have_cut_vertice(g) << endl;
+                            cout << endl;
+                        }
                     }
                 }
-
-                if (!iso) {
-                    {
-                        //TODO: may dublicate
-                        lock_guard<mutex> lock(rpmut);
-                        result_processes.push_back(g);
-                    }
-
-                    {
-                        lock_guard<mutex> lock(out_mut);
-                        cout << "-" << out_count++ << "-" << endl;
-                        cout << g;
-                        cout << "Result network has cut vertice: " << std::boolalpha << network_have_cut_vertice(g) << endl;
-                        cout << endl;
-                    }
-                }
-            }
-        };
-
-        queue.enqueue(job);
+        //    }
+        //}.join();
+      
         return;
     }
 
@@ -74,49 +124,100 @@ void generate_graph(Queue & queue, ProcessesGraph const& g, int max_sync_num, in
         for (int p2 = p1 + 1; p2 < proc_num; ++p2) {
             auto ng = g;
             ng.sync(p1, p2);
-            generate_graph(queue, ng, max_sync_num, sync_num + 1);
+
+            if (fork_count < 4) {
+                //cerr << "Fork" << endl;
+                fork_count++;
+                bf::fiber{
+                    bf::launch::dispatch,
+                    std::allocator_arg, salloc,
+                    generate_graph,
+                    std::ref(salloc), std::move(ng), max_sync_num, sync_num + 1
+                }.join();
+                fork_count--;
+            }
+            else {
+                generate_graph(salloc, std::move(ng), max_sync_num, sync_num + 1);
+            }
         }
     }
 }
 
+#include <barrier.hpp>
+
 int main(int argc, char* argv[]) {
-    cout << "Enumerate of isomorphic executions of N processes and K syncronizations (with unbounded cache opt) (with job queue opt)" << endl;
+    try {
+        cout << "Enumerate of isomorphic executions of N processes and K syncronizations (with unbounded cache opt) (with job queue opt)" << endl;
 
-    if (argc < 3) {
-        cerr << "usage: " << endl;
-        cerr << "enumerate_isomorphic proc_num max_sync_num" << endl;
-        return EXIT_FAILURE;
+        if (argc < 3) {
+            cerr << "usage: " << endl;
+            cerr << "enumerate_isomorphic proc_num max_sync_num" << endl;
+            return EXIT_FAILURE;
+        }
+
+        auto proc_num = atoi(argv[1]);
+        auto sync_num = atoi(argv[2]);
+
+        ProcessesGraph g;
+        g.init(proc_num);
+        cout << "Processes num: " << proc_num << " Sycncronizations num: " << sync_num << endl;
+
+        //start fibers working threads
+        std::uint32_t thread_count = std::thread::hardware_concurrency();
+        boost::fibers::use_scheduling_algorithm< boost::fibers::algo::work_stealing >(thread_count);
+        barrier b{ thread_count };
+
+#if BOOST_OS_WINDOWS || BOOST_OS_BSD
+        allocator_type salloc{ 2 * allocator_type::traits_type::page_size() * 4};
+#else
+        allocator_type salloc{ allocator_type::traits_type::page_size() };
+#endif
+        bool done = false;
+        std::mutex mtx{};
+        boost::fibers::condition_variable_any cnd{};
+
+        std::vector< std::thread > threads;
+        for (std::uint32_t i = 1; i < thread_count; ++i) {
+            // spawn thread
+            threads.emplace_back([thread_count, &b, &mtx, &done, &cnd] {
+                boost::fibers::use_scheduling_algorithm< boost::fibers::algo::work_stealing >(thread_count);
+                b.wait();
+                unique_lock<std::mutex> lk(mtx);
+                cnd.wait(lk, [&done]() { return done; });
+            });
+        }
+        b.wait();
+
+        //generate_graph(salloc, g, sync_num, 0);
+
+        bf::fiber{
+            bf::launch::dispatch,
+            std::allocator_arg, salloc,
+            generate_graph,
+            std::ref(salloc), std::move(g), sync_num, 0
+        }.join();
+
+        unique_lock<std::mutex> lk(mtx);
+        done = true;
+        lk.unlock();
+        cnd.notify_all();
+        for (std::thread & t : threads) {
+            t.join();
+        }
+
+        {
+            lock_guard<bf::mutex> lock(out_mut);
+            cout << "Count of non isomorphic graphs (of dim 2): " << out_count << " isomorphic count: " << iso_count << endl;
+        }
+
+        return EXIT_SUCCESS;
+    }
+    catch (std::exception const& e) {
+        std::cerr << "exception: " << e.what() << std::endl;
+    }
+    catch (...) {
+        std::cerr << "unhandled exception" << std::endl;
     }
 
-    int proc_num = atoi(argv[1]);
-    ProcessesGraph g;
-    g.init(proc_num);
-
-    cout << "Processes num: " << proc_num << endl;
-
-    atomic_bool stopped{false};
-    vector<thread> threads;
-
-    Queue queue;
-    for (int i = 0; i < 3; ++i)
-        threads.emplace_back(
-            thread([&queue, &stopped] {
-                consumer(queue, stopped);
-            })
-        );
-
-
-    generate_graph(queue, g, atoi(argv[2]), 0);
-
-    stopped = true;
-
-    for (auto& t : threads)
-        t.join();
-
-    {
-        lock_guard<mutex> lock(out_mut);
-        cout << "Count of non isomorphic graphs (of dim 2): " << out_count << " isomorphic count: " << iso_count << endl;
-    }
-
-    return EXIT_SUCCESS;
+    return EXIT_FAILURE;
 }
