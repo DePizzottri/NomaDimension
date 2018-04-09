@@ -11,12 +11,12 @@ vector<ProcessesGraph> result_processes;
 vector<int> iso_count;
 int out_count = 0;
 
+unordered_set<hash<ProcessesGraph>::result_type> cache;
+
 void generate_grouped_graph(ProcessesGraph const& g, int group_size, int group_num, int sync_num) {
     auto proc_num = g.proc_num;
 
     hash<ProcessesGraph> hsh;
-
-    unordered_set<hash<ProcessesGraph>::result_type> cache;
 
     if (cache.find(hsh(g)) != cache.end()) {
         return;
