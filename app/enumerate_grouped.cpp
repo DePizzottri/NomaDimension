@@ -29,7 +29,7 @@ void generate_grouped_graph(ProcessesGraph const& g, int group_size, int group_n
     }
 
     if (sync_num <= 0) {
-        if (is_full_syncronized(g) && !network_have_cut_vertice(g)) {
+        if (is_full_syncronized(g)) {
             if (is_poset_2_dimensional(g)) {
                 bool iso = false;
                 for (int i = 0; i<result_processes.size(); ++i) {
