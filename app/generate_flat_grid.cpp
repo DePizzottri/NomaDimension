@@ -12,7 +12,7 @@
 using namespace std;
 
 int main(int argc, char* argv[]) {
-    cout << "Generate flat grid" << endl;
+    cout << "Generate flat grid (unbounded cache optimization)" << endl;
 
     if (argc < 3) {
         cerr << "Usage: exec <proc_num> <max_depth>" << endl;
@@ -24,6 +24,7 @@ int main(int argc, char* argv[]) {
 
     vector<ProcessesGraph> result_processes;
     int isocount = 0;
+    unordered_set<hash<ProcessesGraph>::result_type> cache;
 
     function<void(ProcessesGraph & g, int depth)> generate = [&](ProcessesGraph & g, int depth) {
         if (depth == max_depth) {
@@ -44,6 +45,18 @@ int main(int argc, char* argv[]) {
                 }
             }
             return;
+        }
+
+        hash<ProcessesGraph> hsh;
+
+        if (cache.find(hsh(g)) != cache.end()) {
+            return;
+        }
+
+        auto iso_gs = generate_all_isomorphic(g);
+
+        for (auto& iso_g : iso_gs) {
+            cache.insert(hsh(iso_g));
         }
 
         for (int i = 0; i < g.proc_num - 1; ++i) {
