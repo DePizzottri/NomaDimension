@@ -6,6 +6,7 @@
 #include <cassert>
 #include <iomanip>
 #include <unordered_set>
+#include <algorithm>
 
 using namespace std;
 
@@ -66,6 +67,9 @@ public:
 
         network.clear();
         network.resize(proc_num);
+
+        //proc_sync_name.assign(proc_num, ".");
+        proc_sync_name.resize(proc_num);
     }
 
     void update(int proc) {
@@ -122,7 +126,14 @@ public:
 
         network[proc1].insert(proc2);
         network[proc2].insert(proc1);
+
+        char sync_num = (char) (syncs.size() - 1) + '0';
+        proc_sync_name[proc1] += sync_num;
+        proc_sync_name[proc2] += sync_num;
     }
+
+    using PEHash = vector<string>;
+    PEHash proc_sync_name;
 
 private:
 
@@ -142,6 +153,34 @@ private:
         proc_verteces[proc].push_back(new_vertex);
 
         return new_vertex;
+    }
+};
+
+inline bool is_equal_by_sync_name(ProcessesGraph const& gl, ProcessesGraph const& gr) {
+    vector<string> l = gl.proc_sync_name, r = gr.proc_sync_name;
+
+    sort(l.begin(), l.end());
+    sort(r.begin(), r.end());
+
+    for (int i = 0; i < l.size(); ++i) {
+        if (l[i] != r[i])
+            return false;
+    }
+
+    return true;
+}
+
+struct sync_name_less {
+    inline bool operator()(ProcessesGraph::PEHash l, ProcessesGraph::PEHash r) const {
+        //sort(l.begin(), l.end());
+        //sort(r.begin(), r.end());
+
+        for (int i = 0; i < l.size(); ++i) {
+            if (l[i] < r[i])
+                return true;
+        }
+
+        return false;
     }
 };
 
@@ -183,6 +222,24 @@ namespace std
     };
 }
 
+namespace std
+{
+    template<> struct hash<ProcessesGraph::PEHash>
+    {
+        typedef ProcessesGraph::PEHash argument_type;
+        typedef std::size_t result_type;
+        result_type operator()(argument_type const& s) const noexcept
+        {
+            hash<string> h;
+            result_type ret = 0;
+            for (auto& sync : s) {
+                hash_combine(ret, h(sync));
+            }
+
+            return ret;
+        }
+    };
+}
 //void draw(ProcessesGraph const& g) {
 //    int factor = 4;
 //    int proc_num = g.proc_num;

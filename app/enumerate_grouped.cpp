@@ -6,6 +6,8 @@
 #include <utils.hpp>
 
 #include <unordered_set>
+#include <set>
+#include <string>
 
 vector<ProcessesGraph> result_processes;
 vector<int> iso_count;
@@ -13,20 +15,55 @@ int out_count = 0;
 
 unordered_set<hash<ProcessesGraph>::result_type> cache;
 
+unordered_set<ProcessesGraph::PEHash> cache_pe;
+
+auto sorted = [](auto a) {
+    sort(a.begin(), a.end());
+    return a;
+};
+
 void generate_grouped_graph(ProcessesGraph const& g, int group_size, int group_num, int sync_num) {
     auto proc_num = g.proc_num;
 
-    hash<ProcessesGraph> hsh;
+    //hash<ProcessesGraph> hsh;
 
-    if (cache.find(hsh(g)) != cache.end()) {
+    //if (cache.find(hsh(g)) != cache.end()) {
+    //    cerr << "bb" << endl;
+
+    //    auto s = sorted(g.proc_sync_name);
+    //    if (cache_pe.find(s) == cache_pe.end()) {
+    //        cerr << "Cache PE error - not found" << endl;
+    //        for (auto& a : cache_pe) {
+    //            for (auto& b : a) {
+    //                cerr << b << " ";
+    //            }
+    //            cerr << endl;
+    //        }
+    //    }
+
+    //    return;
+    //}
+
+    if (cache_pe.find(sorted(g.proc_sync_name)) != cache_pe.end()) {
         return;
+        //cerr << "Cache PE error - found" << endl;
+        //for (auto& a : cache_pe) {
+        //    for (auto& b : a) {
+        //        cerr << b << " ";
+        //    }
+        //    cerr << endl;
+        //}
     }
 
-    auto iso_gs = generate_all_isomorphic(g);
+    //auto iso_gs = generate_all_isomorphic(g);
 
-    for (auto& iso_g : iso_gs) {
-        cache.insert(hsh(iso_g));
-    }
+    //for (auto& iso_g : iso_gs) {
+    //    cache.insert(hsh(iso_g));
+    //}
+
+    cache_pe.insert(sorted(g.proc_sync_name));
+
+    //cerr << cache.size() << endl;
 
     if (sync_num <= 0) {
         if (is_full_syncronized(g)) {

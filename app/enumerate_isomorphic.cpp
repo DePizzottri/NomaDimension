@@ -19,7 +19,8 @@ using allocator_type = boost::fibers::fixedsize_stack;
 
 //const uint32_t max_cache_size =   1000000; //~100Mb
 //const uint32_t max_cache_size =   10000000; //~800Mb
-const uint32_t max_cache_size =     100000000; //~
+//const uint32_t max_cache_size =     100000000; //~7.47Gb
+const uint32_t max_cache_size =     400000000; //27.71Gb
 
 atomic_int out_count{ 0 };
 atomic_int iso_count{ 0 };
@@ -34,16 +35,33 @@ struct CacheEntry{
 
 atomic_uint32_t current_time = 0;
 
-typedef boost::multi_index_container<
-    CacheEntry,
-    boost::multi_index::indexed_by<
-        boost::multi_index::hashed_unique<BOOST_MULTI_INDEX_MEMBER(CacheEntry, hash<ProcessesGraph>::result_type, hash)>,
-        boost::multi_index::ordered_unique<BOOST_MULTI_INDEX_MEMBER(CacheEntry, uint32_t, time), std::less<uint32_t>>
-    >
-> cache_t;
+//typedef boost::multi_index_container<
+//    CacheEntry,
+//    boost::multi_index::indexed_by<
+//        boost::multi_index::hashed_unique<BOOST_MULTI_INDEX_MEMBER(CacheEntry, hash<ProcessesGraph>::result_type, hash)>
+//        ,boost::multi_index::ordered_unique<BOOST_MULTI_INDEX_MEMBER(CacheEntry, uint32_t, time), std::less<uint32_t>>
+//    >
+//> cache_t;
+//
+//cache_t cache;
 
-cache_t cache;
+//using PEHash = ProcessesGraph::PEHash;
+//struct CacheEntryPE {
+//    PEHash hash;
+//    uint32_t time;
+//};
+//
+//typedef boost::multi_index_container<
+//    CacheEntryPE,
+//    boost::multi_index::indexed_by<
+//        boost::multi_index::hashed_unique<BOOST_MULTI_INDEX_MEMBER(CacheEntryPE, PEHash, hash)>,
+//        boost::multi_index::ordered_unique<BOOST_MULTI_INDEX_MEMBER(CacheEntryPE, uint32_t, time), std::less<uint32_t>>
+//    >
+//> cache_pe_t;
+//
+//cache_pe_t cache_pe;
 
+unordered_set<ProcessesGraph::PEHash> cache_pe;
 
 vector<ProcessesGraph> result_processes;
 bf::mutex cache_mut;
@@ -55,31 +73,73 @@ void generate_graph(allocator_type & salloc, ProcessesGraph g, int max_sync_num,
         return;
     }
 
+    auto sorted = [](auto a) {
+        sort(a.begin(), a.end());
+        return a;
+    };
+
+
     hash<ProcessesGraph> hsh;
     {
         lock_guard<bf::mutex> lock(cache_mut);
 
-        //if (cache.find(hsh(g)) != cache.end()) {
-        if(cache.get<0>().find(hsh(g)) != cache.get<0>().end()) {
+        if (cache_pe.find(sorted(g.proc_sync_name)) != cache_pe.end()) {
             return;
         }
+
+        //if (cache.get<0>().find(hsh(g)) != cache.get<0>().end()) {
+        //    return;
+        //}
+
+        //if(cache.get<0>().find(hsh(g)) != cache.get<0>().end()) {
+        //    auto s = sorted(g.proc_sync_name);
+        //    if (cache_pe.get<0>().find(s) == cache_pe.get<0>().end()) {
+        //        cerr << "Cache PE error - not found" << endl;
+        //        for (auto& a : cache_pe.get<0>()) {
+        //            for (auto& b : a.hash) {
+        //                cerr << b << " ";
+        //            }
+        //            cerr << endl;
+        //        }
+        //    }
+
+        //    return;
+        //}
+
+        //if (cache_pe.get<0>().find(g.proc_sync_name) != cache_pe.get<0>().end()) {
+        //    cerr << "Cache PE error - found" << endl;
+        //}
     }
 
-    auto iso_gs = generate_all_isomorphic(g);
+    //auto iso_gs = generate_all_isomorphic(g);
     
     {
         lock_guard<bf::mutex> lock(cache_mut);
 
-        if (cache.size() + iso_gs.size() > max_cache_size) {
-            auto& time_idx = cache.get<1>();
-            for (int i = 0; i < iso_gs.size(); ++i) {
-                time_idx.erase(time_idx.begin());
-            }
-        }
+        //for (auto& iso_g : iso_gs) {
+        //    cache.insert({ hsh(iso_g), current_time++ });
+        //}
 
-        for (auto& iso_g : iso_gs) {
-            cache.insert({ hsh(iso_g), current_time++ });
-        }
+        //if (cache.size() + iso_gs.size() > max_cache_size) {
+        //    auto& time_idx = cache.get<1>();
+        //    for (int i = 0; i < iso_gs.size(); ++i) {
+        //        time_idx.erase(time_idx.begin());
+        //    }
+        //}
+
+        //for (auto& iso_g : iso_gs) {
+        //    if (!is_equal_by_sync_name(g, iso_g)) {
+        //        cerr << "Not equal by sync name!" << endl;
+        //    }
+
+        //    if (!is_equal_by_sync_name(iso_g, g)) {
+        //        cerr << "Not equal by sync name!" << endl;
+        //    }
+
+        //    cache.insert({ hsh(iso_g), current_time++ });
+        //}
+
+        cache_pe.insert(sorted(g.proc_sync_name));
     }
 
     if (is_full_syncronized(g)) {
@@ -147,7 +207,7 @@ void generate_graph(allocator_type & salloc, ProcessesGraph g, int max_sync_num,
 
 int main(int argc, char* argv[]) {
     try {
-        cout << "Enumerate of isomorphic executions of N processes and K syncronizations (with unbounded cache opt) (with job queue opt)" << endl;
+        cout << "Enumerate of isomorphic executions of N processes and K syncronizations (with bounded cache opt) (with fibers opt)" << endl;
 
         if (argc < 3) {
             cerr << "usage: " << endl;
