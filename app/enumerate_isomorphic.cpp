@@ -33,7 +33,7 @@ struct CacheEntry{
     uint32_t time;
 };
 
-atomic_uint32_t current_time = 0;
+atomic_uint32_t current_time{ 0 };
 
 //typedef boost::multi_index_container<
 //    CacheEntry,
@@ -230,7 +230,7 @@ int main(int argc, char* argv[]) {
 #if BOOST_OS_WINDOWS || BOOST_OS_BSD
         allocator_type salloc{ 2 * allocator_type::traits_type::page_size() * 4};
 #else
-        allocator_type salloc{ allocator_type::traits_type::page_size() };
+        allocator_type salloc{ allocator_type::traits_type::page_size() * 4};
 #endif
         bool done = false;
         std::mutex mtx{};
