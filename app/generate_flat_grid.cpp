@@ -59,6 +59,10 @@ int main(int argc, char* argv[]) {
             cache.insert(hsh(iso_g));
         }
 
+        if (!is_poset_2_dimensional(g)) {
+            cerr << "Some falt poset is not 2-dimensional" << endl;
+        }
+
         for (int i = 0; i < g.proc_num - 1; ++i) {
             auto ng = g;
             ng.sync(i, i + 1);
