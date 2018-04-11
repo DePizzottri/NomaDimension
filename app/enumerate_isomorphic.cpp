@@ -17,10 +17,10 @@ namespace bf = boost::fibers;
 
 using allocator_type = boost::fibers::fixedsize_stack;
 
-//const uint32_t max_cache_size =   1000000; //~100Mb
-//const uint32_t max_cache_size =   10000000; //~800Mb
-//const uint32_t max_cache_size =     100000000; //~7.47Gb
-const uint32_t max_cache_size =     400000000; //27.71Gb
+//const uint32_t max_cache_size =   1000000; //~295Mb
+const uint32_t max_cache_size =     40000000; //~Mb
+//const uint32_t max_cache_size =     100000000; //>30~Gb
+//const uint32_t max_cache_size =     400000000; //Gb
 
 atomic_int out_count{ 0 };
 atomic_int iso_count{ 0 };
@@ -45,23 +45,23 @@ atomic_uint32_t current_time{ 0 };
 //
 //cache_t cache;
 
-//using PEHash = ProcessesGraph::PEHash;
-//struct CacheEntryPE {
-//    PEHash hash;
-//    uint32_t time;
-//};
-//
-//typedef boost::multi_index_container<
-//    CacheEntryPE,
-//    boost::multi_index::indexed_by<
-//        boost::multi_index::hashed_unique<BOOST_MULTI_INDEX_MEMBER(CacheEntryPE, PEHash, hash)>,
-//        boost::multi_index::ordered_unique<BOOST_MULTI_INDEX_MEMBER(CacheEntryPE, uint32_t, time), std::less<uint32_t>>
-//    >
-//> cache_pe_t;
-//
-//cache_pe_t cache_pe;
+using PEHash = ProcessesGraph::PEHash;
+struct CacheEntryPE {
+    PEHash hash;
+    uint32_t time;
+};
 
-unordered_set<ProcessesGraph::PEHash> cache_pe;
+typedef boost::multi_index_container<
+    CacheEntryPE,
+    boost::multi_index::indexed_by<
+        boost::multi_index::hashed_unique<BOOST_MULTI_INDEX_MEMBER(CacheEntryPE, PEHash, hash), std::hash<PEHash>>,
+        boost::multi_index::ordered_unique<BOOST_MULTI_INDEX_MEMBER(CacheEntryPE, uint32_t, time), std::less<uint32_t>>
+    >
+> cache_pe_t;
+
+cache_pe_t cache_pe;
+
+//unordered_set<ProcessesGraph::PEHash> cache_pe;
 
 vector<ProcessesGraph> result_processes;
 bf::mutex cache_mut;
@@ -79,11 +79,11 @@ void generate_graph(allocator_type & salloc, ProcessesGraph g, int max_sync_num,
     };
 
 
-    hash<ProcessesGraph> hsh;
+    //hash<ProcessesGraph> hsh;
     {
         lock_guard<bf::mutex> lock(cache_mut);
 
-        if (cache_pe.find(sorted(g.proc_sync_name)) != cache_pe.end()) {
+        if (cache_pe.get<0>().find(sorted(g.proc_sync_name)) != cache_pe.get<0>().end()) {
             return;
         }
 
@@ -139,7 +139,13 @@ void generate_graph(allocator_type & salloc, ProcessesGraph g, int max_sync_num,
         //    cache.insert({ hsh(iso_g), current_time++ });
         //}
 
-        cache_pe.insert(sorted(g.proc_sync_name));
+        if (cache_pe.size() + 1 > max_cache_size) {
+            auto& time_idx = cache_pe.get<1>();
+            for(int i = 0; i<5; ++i)
+                time_idx.erase(time_idx.begin());
+        }
+
+        cache_pe.insert({ sorted(g.proc_sync_name), current_time++ });
     }
 
     if (is_full_syncronized(g)) {

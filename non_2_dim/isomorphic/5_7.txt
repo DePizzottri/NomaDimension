@@ -1,0 +1,8063 @@
+(NON 2 Dim) Enumerate of isomorphic executions of N processes and K syncronizations (with bounded cache opt) (with fibers opt)
+Processes num: 5 Sycncronizations num: 7
+-0-
+Processes num: 5
+Syncronizations: 
+0 1
+0 1
+0 2
+3 4
+0 3
+0 1
+2 4
+Result network has cut vertice: true
+
+-1-
+Processes num: 5
+Syncronizations: 
+0 1
+0 1
+0 2
+3 4
+0 3
+1 3
+2 4
+Result network has cut vertice: false
+
+-2-
+Processes num: 5
+Syncronizations: 
+0 1
+0 1
+0 2
+3 4
+0 3
+2 4
+1 2
+Result network has cut vertice: false
+
+-3-
+Processes num: 5
+Syncronizations: 
+0 1
+0 1
+0 2
+3 4
+0 3
+2 4
+1 4
+Result network has cut vertice: false
+
+-4-
+Processes num: 5
+Syncronizations: 
+0 1
+0 1
+2 3
+2 4
+0 2
+0 3
+1 4
+Result network has cut vertice: false
+
+-5-
+Processes num: 5
+Syncronizations: 
+0 1
+0 1
+2 3
+2 4
+0 2
+1 4
+1 3
+Result network has cut vertice: false
+
+-6-
+Processes num: 5
+Syncronizations: 
+0 1
+0 1
+2 3
+2 4
+0 2
+1 4
+2 3
+Result network has cut vertice: true
+
+-7-
+Processes num: 5
+Syncronizations: 
+0 1
+0 1
+2 3
+2 4
+0 2
+1 4
+3 4
+Result network has cut vertice: false
+
+-8-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 1
+3 4
+0 3
+0 1
+2 4
+Result network has cut vertice: true
+
+-9-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 1
+3 4
+0 3
+0 2
+1 4
+Result network has cut vertice: true
+
+-10-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 1
+3 4
+0 3
+1 3
+2 4
+Result network has cut vertice: false
+
+-11-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 1
+3 4
+0 3
+1 4
+1 2
+Result network has cut vertice: false
+
+-12-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 1
+3 4
+0 3
+1 4
+2 3
+Result network has cut vertice: false
+
+-13-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 1
+3 4
+0 3
+1 4
+2 4
+Result network has cut vertice: false
+
+-14-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 1
+3 4
+0 3
+2 4
+1 2
+Result network has cut vertice: false
+
+-15-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 1
+3 4
+0 3
+2 4
+1 4
+Result network has cut vertice: false
+
+-16-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 1
+3 4
+1 3
+0 1
+2 4
+Result network has cut vertice: false
+
+-17-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 1
+3 4
+1 3
+0 3
+2 4
+Result network has cut vertice: false
+
+-18-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 1
+3 4
+1 3
+2 4
+0 2
+Result network has cut vertice: false
+
+-19-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 1
+3 4
+1 3
+2 4
+0 4
+Result network has cut vertice: false
+
+-20-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 2
+3 4
+0 3
+0 1
+2 4
+Result network has cut vertice: true
+
+-21-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 2
+3 4
+0 3
+1 3
+2 4
+Result network has cut vertice: false
+
+-22-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 2
+3 4
+0 3
+2 4
+1 2
+Result network has cut vertice: false
+
+-23-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 2
+3 4
+0 3
+2 4
+1 4
+Result network has cut vertice: false
+
+-24-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 1
+0 2
+0 3
+Result network has cut vertice: true
+
+-25-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 1
+0 2
+1 3
+Result network has cut vertice: true
+
+-26-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 1
+0 2
+2 3
+Result network has cut vertice: true
+
+-27-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 1
+0 2
+3 4
+Result network has cut vertice: true
+
+-28-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 1
+0 3
+0 2
+Result network has cut vertice: true
+
+-29-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 1
+0 3
+1 2
+Result network has cut vertice: true
+
+-30-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 1
+0 3
+2 3
+Result network has cut vertice: true
+
+-31-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 1
+0 3
+2 4
+Result network has cut vertice: true
+
+-32-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 1
+1 2
+1 3
+Result network has cut vertice: true
+
+-33-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 1
+1 2
+2 3
+Result network has cut vertice: true
+
+-34-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 1
+1 2
+3 4
+Result network has cut vertice: true
+
+-35-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 1
+1 3
+1 2
+Result network has cut vertice: true
+
+-36-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 1
+1 3
+2 3
+Result network has cut vertice: true
+
+-37-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 1
+1 3
+2 4
+Result network has cut vertice: true
+
+-38-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 1
+2 4
+2 3
+Result network has cut vertice: true
+
+-39-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 1
+2 4
+3 4
+Result network has cut vertice: true
+
+-40-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 1
+3 4
+2 3
+Result network has cut vertice: true
+
+-41-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 1
+3 4
+2 4
+Result network has cut vertice: true
+
+-42-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 2
+0 1
+0 3
+Result network has cut vertice: true
+
+-43-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 2
+0 1
+1 3
+Result network has cut vertice: true
+
+-44-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 2
+0 1
+2 3
+Result network has cut vertice: true
+
+-45-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 2
+0 1
+3 4
+Result network has cut vertice: true
+
+-46-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 2
+0 3
+0 1
+Result network has cut vertice: true
+
+-47-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 2
+0 3
+1 2
+Result network has cut vertice: true
+
+-48-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 2
+0 3
+1 3
+Result network has cut vertice: true
+
+-49-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 2
+0 3
+1 4
+Result network has cut vertice: true
+
+-50-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 2
+1 2
+1 3
+Result network has cut vertice: true
+
+-51-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 2
+1 2
+2 3
+Result network has cut vertice: true
+
+-52-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 2
+1 2
+3 4
+Result network has cut vertice: true
+
+-53-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 2
+1 4
+1 3
+Result network has cut vertice: true
+
+-54-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 2
+1 4
+2 3
+Result network has cut vertice: true
+
+-55-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 2
+1 4
+3 4
+Result network has cut vertice: true
+
+-56-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 2
+2 3
+1 2
+Result network has cut vertice: true
+
+-57-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 2
+2 3
+1 3
+Result network has cut vertice: true
+
+-58-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 2
+3 4
+1 3
+Result network has cut vertice: true
+
+-59-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 2
+3 4
+1 4
+Result network has cut vertice: true
+
+-60-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 3
+0 1
+0 2
+Result network has cut vertice: true
+
+-61-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 3
+0 1
+1 2
+Result network has cut vertice: true
+
+-62-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 3
+0 1
+2 3
+Result network has cut vertice: true
+
+-63-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 3
+0 1
+2 4
+Result network has cut vertice: true
+
+-64-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 3
+0 2
+1 3
+Result network has cut vertice: true
+
+-65-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 3
+0 2
+1 4
+Result network has cut vertice: true
+
+-66-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 3
+1 3
+1 2
+Result network has cut vertice: true
+
+-67-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 3
+1 3
+2 3
+Result network has cut vertice: true
+
+-68-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 3
+1 3
+2 4
+Result network has cut vertice: true
+
+-69-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 3
+1 4
+1 2
+Result network has cut vertice: true
+
+-70-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 3
+1 4
+2 3
+Result network has cut vertice: true
+
+-71-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 3
+1 4
+2 4
+Result network has cut vertice: true
+
+-72-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 3
+2 4
+1 2
+Result network has cut vertice: true
+
+-73-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+0 3
+2 4
+1 4
+Result network has cut vertice: true
+
+-74-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+1 4
+1 2
+1 3
+Result network has cut vertice: false
+
+-75-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+1 4
+1 2
+2 3
+Result network has cut vertice: false
+
+-76-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+1 4
+1 2
+3 4
+Result network has cut vertice: false
+
+-77-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+1 4
+1 3
+1 2
+Result network has cut vertice: false
+
+-78-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+1 4
+1 3
+2 3
+Result network has cut vertice: false
+
+-79-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+1 4
+1 3
+2 4
+Result network has cut vertice: false
+
+-80-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+1 4
+2 4
+2 3
+Result network has cut vertice: false
+
+-81-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+1 4
+2 4
+3 4
+Result network has cut vertice: false
+
+-82-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+1 4
+3 4
+2 3
+Result network has cut vertice: false
+
+-83-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+1 4
+3 4
+2 4
+Result network has cut vertice: false
+
+-84-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+2 4
+1 2
+1 3
+Result network has cut vertice: false
+
+-85-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+2 4
+1 2
+2 3
+Result network has cut vertice: false
+
+-86-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+2 4
+1 2
+3 4
+Result network has cut vertice: false
+
+-87-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+2 4
+1 4
+1 3
+Result network has cut vertice: false
+
+-88-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+2 4
+1 4
+2 3
+Result network has cut vertice: false
+
+-89-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+2 4
+1 4
+3 4
+Result network has cut vertice: false
+
+-90-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+2 4
+2 3
+1 2
+Result network has cut vertice: false
+
+-91-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+2 4
+2 3
+1 3
+Result network has cut vertice: false
+
+-92-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+2 4
+3 4
+1 3
+Result network has cut vertice: false
+
+-93-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+2 4
+3 4
+1 4
+Result network has cut vertice: false
+
+-94-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+3 4
+1 3
+1 2
+Result network has cut vertice: false
+
+-95-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+3 4
+1 3
+2 3
+Result network has cut vertice: false
+
+-96-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+3 4
+1 3
+2 4
+Result network has cut vertice: false
+
+-97-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+3 4
+1 4
+1 2
+Result network has cut vertice: false
+
+-98-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+3 4
+1 4
+2 3
+Result network has cut vertice: false
+
+-99-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+0 4
+3 4
+1 4
+2 4
+Result network has cut vertice: false
+
+-100-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+1 4
+0 1
+0 2
+3 4
+Result network has cut vertice: true
+
+-101-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+1 4
+0 1
+1 2
+3 4
+Result network has cut vertice: false
+
+-102-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+1 4
+0 1
+3 4
+2 3
+Result network has cut vertice: false
+
+-103-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+1 4
+0 1
+3 4
+2 4
+Result network has cut vertice: false
+
+-104-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+1 4
+0 4
+0 2
+1 3
+Result network has cut vertice: true
+
+-105-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+1 4
+0 4
+1 3
+1 2
+Result network has cut vertice: false
+
+-106-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+1 4
+0 4
+1 3
+2 3
+Result network has cut vertice: false
+
+-107-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+1 4
+0 4
+1 3
+2 4
+Result network has cut vertice: false
+
+-108-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+2 4
+0 2
+0 1
+3 4
+Result network has cut vertice: true
+
+-109-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+2 4
+0 2
+1 2
+3 4
+Result network has cut vertice: false
+
+-110-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+2 4
+0 2
+3 4
+1 3
+Result network has cut vertice: false
+
+-111-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+2 4
+0 2
+3 4
+1 4
+Result network has cut vertice: false
+
+-112-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+2 4
+0 4
+0 1
+2 3
+Result network has cut vertice: true
+
+-113-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+2 4
+0 4
+1 4
+2 3
+Result network has cut vertice: false
+
+-114-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+2 4
+0 4
+2 3
+1 2
+Result network has cut vertice: false
+
+-115-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+2 4
+0 4
+2 3
+1 3
+Result network has cut vertice: false
+
+-116-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+0 3
+0 1
+0 2
+Result network has cut vertice: true
+
+-117-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+0 3
+0 1
+1 2
+Result network has cut vertice: true
+
+-118-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+0 3
+0 1
+2 3
+Result network has cut vertice: true
+
+-119-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+0 3
+0 1
+2 4
+Result network has cut vertice: true
+
+-120-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+0 3
+0 2
+1 3
+Result network has cut vertice: true
+
+-121-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+0 3
+0 2
+1 4
+Result network has cut vertice: true
+
+-122-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+0 3
+1 3
+1 2
+Result network has cut vertice: true
+
+-123-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+0 3
+1 3
+2 3
+Result network has cut vertice: true
+
+-124-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+0 3
+1 3
+2 4
+Result network has cut vertice: false
+
+-125-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+0 3
+1 4
+1 2
+Result network has cut vertice: false
+
+-126-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+0 3
+1 4
+2 3
+Result network has cut vertice: false
+
+-127-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+0 3
+1 4
+2 4
+Result network has cut vertice: false
+
+-128-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+0 3
+2 4
+1 2
+Result network has cut vertice: false
+
+-129-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+0 3
+2 4
+1 4
+Result network has cut vertice: false
+
+-130-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+0 4
+0 1
+0 2
+Result network has cut vertice: true
+
+-131-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+0 4
+0 1
+1 2
+Result network has cut vertice: true
+
+-132-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+0 4
+0 1
+2 3
+Result network has cut vertice: true
+
+-133-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+0 4
+0 1
+2 4
+Result network has cut vertice: true
+
+-134-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+0 4
+0 2
+1 3
+Result network has cut vertice: true
+
+-135-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+0 4
+0 2
+1 4
+Result network has cut vertice: true
+
+-136-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+0 4
+1 3
+1 2
+Result network has cut vertice: false
+
+-137-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+0 4
+1 3
+2 3
+Result network has cut vertice: false
+
+-138-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+0 4
+1 3
+2 4
+Result network has cut vertice: false
+
+-139-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+0 4
+1 4
+1 2
+Result network has cut vertice: false
+
+-140-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+0 4
+1 4
+2 3
+Result network has cut vertice: false
+
+-141-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+0 4
+1 4
+2 4
+Result network has cut vertice: false
+
+-142-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+0 4
+2 3
+1 2
+Result network has cut vertice: false
+
+-143-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+0 4
+2 3
+1 3
+Result network has cut vertice: false
+
+-144-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+1 3
+0 1
+0 2
+Result network has cut vertice: true
+
+-145-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+1 3
+0 1
+1 2
+Result network has cut vertice: true
+
+-146-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+1 3
+0 1
+2 3
+Result network has cut vertice: true
+
+-147-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+1 3
+0 1
+2 4
+Result network has cut vertice: false
+
+-148-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+1 3
+0 3
+0 2
+Result network has cut vertice: true
+
+-149-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+1 3
+0 3
+1 2
+Result network has cut vertice: true
+
+-150-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+1 3
+0 3
+2 3
+Result network has cut vertice: true
+
+-151-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+1 3
+0 3
+2 4
+Result network has cut vertice: false
+
+-152-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+1 3
+1 2
+0 1
+Result network has cut vertice: true
+
+-153-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+1 3
+1 2
+0 2
+Result network has cut vertice: true
+
+-154-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+1 3
+2 3
+0 2
+Result network has cut vertice: true
+
+-155-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+1 3
+2 3
+0 3
+Result network has cut vertice: true
+
+-156-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+1 3
+2 4
+0 2
+Result network has cut vertice: false
+
+-157-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+1 3
+2 4
+0 4
+Result network has cut vertice: false
+
+-158-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+1 4
+0 1
+0 2
+Result network has cut vertice: true
+
+-159-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+1 4
+0 1
+1 2
+Result network has cut vertice: false
+
+-160-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+1 4
+0 1
+2 3
+Result network has cut vertice: false
+
+-161-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+1 4
+0 1
+2 4
+Result network has cut vertice: false
+
+-162-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+1 4
+0 4
+0 2
+Result network has cut vertice: true
+
+-163-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+1 4
+0 4
+1 2
+Result network has cut vertice: false
+
+-164-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+1 4
+0 4
+2 3
+Result network has cut vertice: false
+
+-165-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+1 4
+0 4
+2 4
+Result network has cut vertice: false
+
+-166-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+1 4
+1 2
+0 1
+Result network has cut vertice: false
+
+-167-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+1 4
+1 2
+0 2
+Result network has cut vertice: false
+
+-168-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+1 4
+2 3
+0 2
+Result network has cut vertice: false
+
+-169-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+1 4
+2 3
+0 3
+Result network has cut vertice: false
+
+-170-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+1 4
+2 4
+0 2
+Result network has cut vertice: false
+
+-171-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+1 4
+2 4
+0 4
+Result network has cut vertice: false
+
+-172-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+2 3
+0 2
+0 1
+Result network has cut vertice: true
+
+-173-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+2 3
+0 2
+1 2
+Result network has cut vertice: true
+
+-174-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+2 3
+0 2
+1 3
+Result network has cut vertice: true
+
+-175-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+2 3
+0 3
+0 1
+Result network has cut vertice: true
+
+-176-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+2 3
+0 3
+1 2
+Result network has cut vertice: true
+
+-177-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+2 3
+0 3
+1 3
+Result network has cut vertice: true
+
+-178-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+2 3
+1 2
+0 1
+Result network has cut vertice: true
+
+-179-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+2 3
+1 2
+0 2
+Result network has cut vertice: true
+
+-180-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+2 3
+1 3
+0 1
+Result network has cut vertice: true
+
+-181-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+2 3
+1 3
+0 3
+Result network has cut vertice: true
+
+-182-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+2 4
+0 2
+0 1
+Result network has cut vertice: true
+
+-183-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+2 4
+0 2
+1 2
+Result network has cut vertice: false
+
+-184-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+2 4
+0 2
+1 4
+Result network has cut vertice: false
+
+-185-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+2 4
+0 4
+0 1
+Result network has cut vertice: true
+
+-186-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+2 4
+0 4
+1 2
+Result network has cut vertice: false
+
+-187-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+2 4
+0 4
+1 4
+Result network has cut vertice: false
+
+-188-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+2 4
+1 2
+0 1
+Result network has cut vertice: false
+
+-189-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+2 4
+1 2
+0 2
+Result network has cut vertice: false
+
+-190-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+2 4
+1 4
+0 1
+Result network has cut vertice: false
+
+-191-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+0 3
+3 4
+2 4
+1 4
+0 4
+Result network has cut vertice: false
+
+-192-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+1 2
+3 4
+0 3
+0 1
+2 4
+Result network has cut vertice: false
+
+-193-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+1 2
+3 4
+0 3
+0 2
+1 4
+Result network has cut vertice: false
+
+-194-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+1 2
+3 4
+0 3
+1 3
+2 4
+Result network has cut vertice: false
+
+-195-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+1 2
+3 4
+0 3
+1 4
+1 2
+Result network has cut vertice: false
+
+-196-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+1 2
+3 4
+0 3
+1 4
+2 3
+Result network has cut vertice: false
+
+-197-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+1 2
+3 4
+0 3
+1 4
+2 4
+Result network has cut vertice: false
+
+-198-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+1 2
+3 4
+0 3
+2 4
+1 2
+Result network has cut vertice: false
+
+-199-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+1 2
+3 4
+0 3
+2 4
+1 4
+Result network has cut vertice: false
+
+-200-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+1 2
+3 4
+1 3
+0 1
+2 4
+Result network has cut vertice: false
+
+-201-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+1 2
+3 4
+1 3
+0 3
+2 4
+Result network has cut vertice: false
+
+-202-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+1 2
+3 4
+1 3
+2 4
+0 2
+Result network has cut vertice: false
+
+-203-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+1 2
+3 4
+1 3
+2 4
+0 4
+Result network has cut vertice: false
+
+-204-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+1 3
+2 4
+1 2
+0 1
+3 4
+Result network has cut vertice: false
+
+-205-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+1 3
+2 4
+1 2
+0 2
+3 4
+Result network has cut vertice: false
+
+-206-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+1 3
+2 4
+1 2
+3 4
+0 3
+Result network has cut vertice: false
+
+-207-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+1 3
+2 4
+1 2
+3 4
+0 4
+Result network has cut vertice: false
+
+-208-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+1 3
+2 4
+1 4
+0 1
+2 3
+Result network has cut vertice: false
+
+-209-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+1 3
+2 4
+1 4
+0 4
+2 3
+Result network has cut vertice: false
+
+-210-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+1 3
+2 4
+1 4
+2 3
+0 2
+Result network has cut vertice: false
+
+-211-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+1 3
+2 4
+1 4
+2 3
+0 3
+Result network has cut vertice: false
+
+-212-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 2
+0 1
+0 3
+Result network has cut vertice: true
+
+-213-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 2
+0 1
+1 3
+Result network has cut vertice: true
+
+-214-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 2
+0 1
+2 3
+Result network has cut vertice: true
+
+-215-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 2
+0 1
+3 4
+Result network has cut vertice: true
+
+-216-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 2
+0 3
+0 1
+Result network has cut vertice: true
+
+-217-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 2
+0 3
+1 2
+Result network has cut vertice: true
+
+-218-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 2
+0 3
+1 3
+Result network has cut vertice: true
+
+-219-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 2
+0 3
+1 4
+Result network has cut vertice: false
+
+-220-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 2
+1 2
+1 3
+Result network has cut vertice: true
+
+-221-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 2
+1 2
+2 3
+Result network has cut vertice: true
+
+-222-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 2
+1 2
+3 4
+Result network has cut vertice: true
+
+-223-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 2
+1 4
+1 3
+Result network has cut vertice: false
+
+-224-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 2
+1 4
+2 3
+Result network has cut vertice: true
+
+-225-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 2
+1 4
+3 4
+Result network has cut vertice: false
+
+-226-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 2
+2 3
+1 2
+Result network has cut vertice: true
+
+-227-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 2
+2 3
+1 3
+Result network has cut vertice: true
+
+-228-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 2
+3 4
+1 3
+Result network has cut vertice: false
+
+-229-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 2
+3 4
+1 4
+Result network has cut vertice: false
+
+-230-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 4
+0 1
+0 3
+Result network has cut vertice: true
+
+-231-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 4
+0 1
+1 3
+Result network has cut vertice: false
+
+-232-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 4
+0 1
+2 3
+Result network has cut vertice: true
+
+-233-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 4
+0 1
+3 4
+Result network has cut vertice: true
+
+-234-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 4
+0 3
+0 1
+Result network has cut vertice: true
+
+-235-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 4
+0 3
+1 2
+Result network has cut vertice: false
+
+-236-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 4
+0 3
+1 3
+Result network has cut vertice: false
+
+-237-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 4
+0 3
+1 4
+Result network has cut vertice: false
+
+-238-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 4
+1 2
+1 3
+Result network has cut vertice: false
+
+-239-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 4
+1 2
+2 3
+Result network has cut vertice: true
+
+-240-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 4
+1 2
+3 4
+Result network has cut vertice: false
+
+-241-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 4
+1 4
+1 3
+Result network has cut vertice: false
+
+-242-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 4
+1 4
+2 3
+Result network has cut vertice: true
+
+-243-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 4
+1 4
+3 4
+Result network has cut vertice: false
+
+-244-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 4
+2 3
+1 2
+Result network has cut vertice: true
+
+-245-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 4
+2 3
+1 3
+Result network has cut vertice: false
+
+-246-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 4
+3 4
+1 3
+Result network has cut vertice: false
+
+-247-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+0 4
+3 4
+1 4
+Result network has cut vertice: false
+
+-248-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+1 2
+0 1
+0 3
+Result network has cut vertice: true
+
+-249-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+1 2
+0 1
+1 3
+Result network has cut vertice: true
+
+-250-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+1 2
+0 1
+2 3
+Result network has cut vertice: true
+
+-251-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+1 2
+0 1
+3 4
+Result network has cut vertice: true
+
+-252-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+1 2
+0 2
+0 3
+Result network has cut vertice: true
+
+-253-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+1 2
+0 2
+1 3
+Result network has cut vertice: true
+
+-254-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+1 2
+0 2
+2 3
+Result network has cut vertice: true
+
+-255-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+1 2
+0 2
+3 4
+Result network has cut vertice: true
+
+-256-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+1 2
+1 3
+0 1
+Result network has cut vertice: true
+
+-257-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+1 2
+1 3
+0 3
+Result network has cut vertice: true
+
+-258-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+1 2
+2 3
+0 2
+Result network has cut vertice: true
+
+-259-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+1 2
+2 3
+0 3
+Result network has cut vertice: true
+
+-260-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+1 2
+3 4
+0 3
+Result network has cut vertice: false
+
+-261-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+1 2
+3 4
+0 4
+Result network has cut vertice: false
+
+-262-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+1 4
+0 1
+0 3
+Result network has cut vertice: false
+
+-263-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+1 4
+0 1
+1 3
+Result network has cut vertice: false
+
+-264-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+1 4
+0 1
+2 3
+Result network has cut vertice: true
+
+-265-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+1 4
+0 1
+3 4
+Result network has cut vertice: false
+
+-266-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+1 4
+0 4
+0 3
+Result network has cut vertice: false
+
+-267-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+1 4
+0 4
+1 3
+Result network has cut vertice: false
+
+-268-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+1 4
+0 4
+2 3
+Result network has cut vertice: true
+
+-269-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+1 4
+0 4
+3 4
+Result network has cut vertice: false
+
+-270-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+1 4
+1 3
+0 1
+Result network has cut vertice: false
+
+-271-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+1 4
+1 3
+0 3
+Result network has cut vertice: false
+
+-272-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+1 4
+2 3
+0 2
+Result network has cut vertice: true
+
+-273-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+1 4
+2 3
+0 3
+Result network has cut vertice: false
+
+-274-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+1 4
+3 4
+0 3
+Result network has cut vertice: false
+
+-275-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+1 4
+3 4
+0 4
+Result network has cut vertice: false
+
+-276-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+2 3
+0 2
+1 3
+Result network has cut vertice: true
+
+-277-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+2 3
+0 3
+1 2
+Result network has cut vertice: true
+
+-278-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+2 3
+1 2
+0 1
+Result network has cut vertice: true
+
+-279-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+2 3
+1 2
+0 2
+Result network has cut vertice: true
+
+-280-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+2 3
+1 3
+0 1
+Result network has cut vertice: true
+
+-281-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+2 3
+1 3
+0 3
+Result network has cut vertice: true
+
+-282-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+3 4
+0 3
+1 4
+Result network has cut vertice: false
+
+-283-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+3 4
+0 4
+1 3
+Result network has cut vertice: false
+
+-284-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+3 4
+1 3
+0 1
+Result network has cut vertice: false
+
+-285-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+3 4
+1 3
+0 3
+Result network has cut vertice: false
+
+-286-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+3 4
+1 4
+0 1
+Result network has cut vertice: false
+
+-287-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+2 4
+3 4
+1 4
+0 4
+Result network has cut vertice: false
+
+-288-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 3
+0 1
+0 2
+Result network has cut vertice: true
+
+-289-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 3
+0 1
+1 2
+Result network has cut vertice: true
+
+-290-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 3
+0 1
+2 3
+Result network has cut vertice: true
+
+-291-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 3
+0 1
+2 4
+Result network has cut vertice: true
+
+-292-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 3
+0 2
+0 1
+Result network has cut vertice: true
+
+-293-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 3
+0 2
+1 2
+Result network has cut vertice: true
+
+-294-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 3
+0 2
+1 3
+Result network has cut vertice: true
+
+-295-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 3
+0 2
+1 4
+Result network has cut vertice: false
+
+-296-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 3
+1 3
+1 2
+Result network has cut vertice: true
+
+-297-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 3
+1 3
+2 3
+Result network has cut vertice: true
+
+-298-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 3
+1 3
+2 4
+Result network has cut vertice: false
+
+-299-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 3
+1 4
+1 2
+Result network has cut vertice: false
+
+-300-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 3
+1 4
+2 3
+Result network has cut vertice: false
+
+-301-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 3
+1 4
+2 4
+Result network has cut vertice: false
+
+-302-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 3
+2 3
+1 2
+Result network has cut vertice: true
+
+-303-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 3
+2 3
+1 3
+Result network has cut vertice: true
+
+-304-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 3
+2 4
+1 2
+Result network has cut vertice: false
+
+-305-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 3
+2 4
+1 4
+Result network has cut vertice: false
+
+-306-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 4
+0 1
+0 2
+Result network has cut vertice: true
+
+-307-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 4
+0 1
+1 2
+Result network has cut vertice: false
+
+-308-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 4
+0 1
+2 3
+Result network has cut vertice: true
+
+-309-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 4
+0 1
+2 4
+Result network has cut vertice: true
+
+-310-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 4
+0 2
+0 1
+Result network has cut vertice: true
+
+-311-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 4
+0 2
+1 2
+Result network has cut vertice: false
+
+-312-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 4
+0 2
+1 3
+Result network has cut vertice: false
+
+-313-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 4
+0 2
+1 4
+Result network has cut vertice: false
+
+-314-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 4
+1 3
+1 2
+Result network has cut vertice: false
+
+-315-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 4
+1 3
+2 3
+Result network has cut vertice: false
+
+-316-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 4
+1 3
+2 4
+Result network has cut vertice: false
+
+-317-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 4
+1 4
+1 2
+Result network has cut vertice: false
+
+-318-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 4
+1 4
+2 3
+Result network has cut vertice: false
+
+-319-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 4
+1 4
+2 4
+Result network has cut vertice: false
+
+-320-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 4
+2 3
+1 2
+Result network has cut vertice: false
+
+-321-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 4
+2 3
+1 3
+Result network has cut vertice: false
+
+-322-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 4
+2 4
+1 2
+Result network has cut vertice: false
+
+-323-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+0 4
+2 4
+1 4
+Result network has cut vertice: false
+
+-324-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+1 3
+0 1
+0 2
+Result network has cut vertice: true
+
+-325-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+1 3
+0 1
+1 2
+Result network has cut vertice: true
+
+-326-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+1 3
+0 1
+2 3
+Result network has cut vertice: true
+
+-327-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+1 3
+0 1
+2 4
+Result network has cut vertice: false
+
+-328-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+1 3
+0 3
+0 2
+Result network has cut vertice: true
+
+-329-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+1 3
+0 3
+1 2
+Result network has cut vertice: true
+
+-330-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+1 3
+0 3
+2 3
+Result network has cut vertice: true
+
+-331-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+1 3
+0 3
+2 4
+Result network has cut vertice: false
+
+-332-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+1 3
+1 2
+0 1
+Result network has cut vertice: true
+
+-333-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+1 3
+1 2
+0 2
+Result network has cut vertice: true
+
+-334-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+1 3
+2 3
+0 2
+Result network has cut vertice: true
+
+-335-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+1 3
+2 3
+0 3
+Result network has cut vertice: true
+
+-336-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+1 3
+2 4
+0 2
+Result network has cut vertice: false
+
+-337-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+1 3
+2 4
+0 4
+Result network has cut vertice: false
+
+-338-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+1 4
+0 1
+0 2
+Result network has cut vertice: false
+
+-339-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+1 4
+0 1
+1 2
+Result network has cut vertice: false
+
+-340-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+1 4
+0 1
+2 3
+Result network has cut vertice: false
+
+-341-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+1 4
+0 1
+2 4
+Result network has cut vertice: false
+
+-342-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+1 4
+0 4
+0 2
+Result network has cut vertice: false
+
+-343-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+1 4
+0 4
+1 2
+Result network has cut vertice: false
+
+-344-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+1 4
+0 4
+2 3
+Result network has cut vertice: false
+
+-345-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+1 4
+0 4
+2 4
+Result network has cut vertice: false
+
+-346-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+1 4
+1 2
+0 1
+Result network has cut vertice: false
+
+-347-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+1 4
+1 2
+0 2
+Result network has cut vertice: false
+
+-348-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+1 4
+2 3
+0 2
+Result network has cut vertice: false
+
+-349-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+1 4
+2 3
+0 3
+Result network has cut vertice: false
+
+-350-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+1 4
+2 4
+0 2
+Result network has cut vertice: false
+
+-351-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+1 4
+2 4
+0 4
+Result network has cut vertice: false
+
+-352-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+2 3
+0 2
+1 3
+Result network has cut vertice: true
+
+-353-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+2 3
+0 3
+1 2
+Result network has cut vertice: true
+
+-354-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+2 3
+1 2
+0 1
+Result network has cut vertice: true
+
+-355-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+2 3
+1 2
+0 2
+Result network has cut vertice: true
+
+-356-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+2 3
+1 3
+0 1
+Result network has cut vertice: true
+
+-357-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+2 3
+1 3
+0 3
+Result network has cut vertice: true
+
+-358-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+2 4
+0 2
+1 4
+Result network has cut vertice: false
+
+-359-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+2 4
+0 4
+1 2
+Result network has cut vertice: false
+
+-360-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+2 4
+1 2
+0 1
+Result network has cut vertice: true
+
+-361-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+2 4
+1 2
+0 2
+Result network has cut vertice: true
+
+-362-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+2 4
+1 4
+0 1
+Result network has cut vertice: false
+
+-363-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+2 3
+3 4
+2 4
+1 4
+0 4
+Result network has cut vertice: false
+
+-364-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 1
+0 1
+2 4
+Result network has cut vertice: true
+
+-365-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 1
+0 2
+0 4
+Result network has cut vertice: true
+
+-366-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 1
+0 2
+1 4
+Result network has cut vertice: true
+
+-367-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 1
+0 2
+2 4
+Result network has cut vertice: true
+
+-368-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 1
+0 2
+3 4
+Result network has cut vertice: true
+
+-369-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 1
+0 3
+2 4
+Result network has cut vertice: true
+
+-370-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 1
+0 4
+0 2
+Result network has cut vertice: true
+
+-371-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 1
+0 4
+1 2
+Result network has cut vertice: true
+
+-372-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 1
+0 4
+2 3
+Result network has cut vertice: true
+
+-373-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 1
+0 4
+2 4
+Result network has cut vertice: true
+
+-374-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 1
+1 2
+1 4
+Result network has cut vertice: false
+
+-375-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 1
+1 2
+2 4
+Result network has cut vertice: false
+
+-376-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 1
+1 2
+3 4
+Result network has cut vertice: true
+
+-377-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 1
+1 3
+2 4
+Result network has cut vertice: false
+
+-378-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 1
+1 4
+1 2
+Result network has cut vertice: false
+
+-379-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 1
+1 4
+2 3
+Result network has cut vertice: false
+
+-380-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 1
+1 4
+2 4
+Result network has cut vertice: false
+
+-381-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 1
+2 3
+2 4
+Result network has cut vertice: true
+
+-382-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 1
+2 3
+3 4
+Result network has cut vertice: true
+
+-383-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 1
+2 4
+Result network has cut vertice: true
+
+-384-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 1
+3 4
+2 3
+Result network has cut vertice: true
+
+-385-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 1
+3 4
+2 4
+Result network has cut vertice: true
+
+-386-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 2
+0 1
+0 4
+Result network has cut vertice: true
+
+-387-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 2
+0 1
+1 4
+Result network has cut vertice: true
+
+-388-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 2
+0 1
+2 4
+Result network has cut vertice: true
+
+-389-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 2
+0 4
+0 1
+Result network has cut vertice: true
+
+-390-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 2
+0 4
+1 2
+Result network has cut vertice: true
+
+-391-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 2
+0 4
+1 3
+Result network has cut vertice: true
+
+-392-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 2
+0 4
+1 4
+Result network has cut vertice: true
+
+-393-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 2
+1 2
+1 4
+Result network has cut vertice: false
+
+-394-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 2
+1 2
+2 4
+Result network has cut vertice: false
+
+-395-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 2
+1 3
+1 4
+Result network has cut vertice: true
+
+-396-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 2
+1 3
+2 4
+Result network has cut vertice: false
+
+-397-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 2
+1 3
+3 4
+Result network has cut vertice: true
+
+-398-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 2
+2 4
+1 2
+Result network has cut vertice: false
+
+-399-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 2
+2 4
+1 4
+Result network has cut vertice: false
+
+-400-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 2
+3 4
+1 3
+Result network has cut vertice: true
+
+-401-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 2
+3 4
+1 4
+Result network has cut vertice: true
+
+-402-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 3
+0 1
+2 4
+Result network has cut vertice: true
+
+-403-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 3
+1 3
+2 4
+Result network has cut vertice: false
+
+-404-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 3
+2 4
+1 2
+Result network has cut vertice: false
+
+-405-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 3
+2 4
+1 4
+Result network has cut vertice: false
+
+-406-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 4
+0 1
+0 2
+Result network has cut vertice: true
+
+-407-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 4
+0 1
+1 2
+Result network has cut vertice: true
+
+-408-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 4
+0 1
+2 3
+Result network has cut vertice: true
+
+-409-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 4
+0 1
+2 4
+Result network has cut vertice: true
+
+-410-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 4
+0 2
+0 1
+Result network has cut vertice: true
+
+-411-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 4
+0 2
+1 2
+Result network has cut vertice: true
+
+-412-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 4
+0 2
+1 3
+Result network has cut vertice: true
+
+-413-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 4
+0 2
+1 4
+Result network has cut vertice: true
+
+-414-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 4
+1 3
+1 2
+Result network has cut vertice: false
+
+-415-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 4
+1 3
+2 3
+Result network has cut vertice: false
+
+-416-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 4
+1 3
+2 4
+Result network has cut vertice: false
+
+-417-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 4
+1 4
+1 2
+Result network has cut vertice: false
+
+-418-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 4
+1 4
+2 3
+Result network has cut vertice: false
+
+-419-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 4
+1 4
+2 4
+Result network has cut vertice: false
+
+-420-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 4
+2 4
+1 2
+Result network has cut vertice: false
+
+-421-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+0 4
+2 4
+1 4
+Result network has cut vertice: false
+
+-422-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+1 3
+0 1
+2 4
+Result network has cut vertice: false
+
+-423-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+1 3
+0 3
+2 4
+Result network has cut vertice: false
+
+-424-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+1 3
+1 2
+1 4
+Result network has cut vertice: false
+
+-425-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+1 3
+1 2
+2 4
+Result network has cut vertice: false
+
+-426-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+1 3
+1 2
+3 4
+Result network has cut vertice: true
+
+-427-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+1 3
+1 3
+2 4
+Result network has cut vertice: false
+
+-428-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+1 3
+1 4
+1 2
+Result network has cut vertice: false
+
+-429-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+1 3
+1 4
+2 3
+Result network has cut vertice: false
+
+-430-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+1 3
+1 4
+2 4
+Result network has cut vertice: false
+
+-431-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+1 3
+2 3
+2 4
+Result network has cut vertice: false
+
+-432-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+1 3
+2 3
+3 4
+Result network has cut vertice: true
+
+-433-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+1 3
+2 4
+Result network has cut vertice: false
+
+-434-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+1 3
+3 4
+2 3
+Result network has cut vertice: true
+
+-435-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+1 3
+3 4
+2 4
+Result network has cut vertice: false
+
+-436-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+1 4
+0 1
+2 4
+Result network has cut vertice: false
+
+-437-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+1 4
+0 4
+1 2
+Result network has cut vertice: false
+
+-438-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+1 4
+1 2
+1 4
+Result network has cut vertice: false
+
+-439-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+1 4
+1 2
+2 4
+Result network has cut vertice: false
+
+-440-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+1 4
+1 2
+3 4
+Result network has cut vertice: false
+
+-441-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+1 4
+1 3
+2 4
+Result network has cut vertice: false
+
+-442-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+1 4
+2 4
+1 2
+Result network has cut vertice: false
+
+-443-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+1 4
+2 4
+1 4
+Result network has cut vertice: false
+
+-444-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+2 3
+1 2
+1 4
+Result network has cut vertice: false
+
+-445-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+2 3
+1 2
+2 4
+Result network has cut vertice: false
+
+-446-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+2 3
+1 2
+3 4
+Result network has cut vertice: true
+
+-447-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+2 3
+1 3
+1 4
+Result network has cut vertice: false
+
+-448-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+2 3
+1 3
+2 4
+Result network has cut vertice: false
+
+-449-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+2 3
+1 3
+3 4
+Result network has cut vertice: true
+
+-450-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+2 3
+2 4
+1 2
+Result network has cut vertice: false
+
+-451-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+2 3
+2 4
+1 4
+Result network has cut vertice: false
+
+-452-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+2 3
+3 4
+1 3
+Result network has cut vertice: true
+
+-453-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+2 3
+3 4
+1 4
+Result network has cut vertice: false
+
+-454-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+2 4
+0 2
+0 1
+Result network has cut vertice: true
+
+-455-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+2 4
+0 2
+1 2
+Result network has cut vertice: false
+
+-456-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+2 4
+0 2
+1 3
+Result network has cut vertice: false
+
+-457-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+2 4
+0 2
+1 4
+Result network has cut vertice: false
+
+-458-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+2 4
+0 4
+0 1
+Result network has cut vertice: true
+
+-459-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+2 4
+0 4
+1 2
+Result network has cut vertice: false
+
+-460-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+2 4
+0 4
+1 3
+Result network has cut vertice: false
+
+-461-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+2 4
+0 4
+1 4
+Result network has cut vertice: false
+
+-462-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+2 4
+1 2
+Result network has cut vertice: false
+
+-463-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+2 4
+1 4
+Result network has cut vertice: false
+
+-464-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+2 4
+2 3
+0 1
+Result network has cut vertice: true
+
+-465-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+2 4
+2 3
+1 2
+Result network has cut vertice: false
+
+-466-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+2 4
+2 3
+1 3
+Result network has cut vertice: false
+
+-467-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+2 4
+2 3
+1 4
+Result network has cut vertice: false
+
+-468-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+2 4
+2 4
+0 1
+Result network has cut vertice: true
+
+-469-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+2 4
+2 4
+1 2
+Result network has cut vertice: false
+
+-470-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+2 4
+2 4
+1 3
+Result network has cut vertice: false
+
+-471-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+2 4
+2 4
+1 4
+Result network has cut vertice: false
+
+-472-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+2 4
+3 4
+0 1
+Result network has cut vertice: true
+
+-473-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+2 4
+3 4
+1 2
+Result network has cut vertice: false
+
+-474-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+2 4
+3 4
+1 3
+Result network has cut vertice: false
+
+-475-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+2 4
+3 4
+1 4
+Result network has cut vertice: false
+
+-476-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+3 4
+1 3
+1 2
+Result network has cut vertice: true
+
+-477-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+3 4
+1 3
+2 3
+Result network has cut vertice: true
+
+-478-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+3 4
+1 3
+2 4
+Result network has cut vertice: false
+
+-479-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+3 4
+1 4
+1 2
+Result network has cut vertice: false
+
+-480-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+3 4
+1 4
+2 3
+Result network has cut vertice: false
+
+-481-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+3 4
+1 4
+2 4
+Result network has cut vertice: false
+
+-482-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+3 4
+2 3
+1 2
+Result network has cut vertice: true
+
+-483-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+3 4
+2 3
+1 3
+Result network has cut vertice: true
+
+-484-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+3 4
+2 4
+1 2
+Result network has cut vertice: false
+
+-485-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+0 3
+3 4
+2 4
+1 4
+Result network has cut vertice: false
+
+-486-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+1 3
+0 1
+0 3
+2 4
+Result network has cut vertice: false
+
+-487-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+1 3
+0 1
+0 4
+2 3
+Result network has cut vertice: false
+
+-488-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+1 3
+0 1
+1 3
+2 4
+Result network has cut vertice: false
+
+-489-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+1 3
+0 1
+1 4
+2 3
+Result network has cut vertice: false
+
+-490-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+1 3
+0 1
+2 3
+2 4
+Result network has cut vertice: false
+
+-491-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+1 3
+0 1
+2 3
+3 4
+Result network has cut vertice: true
+
+-492-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+1 3
+0 1
+2 4
+2 3
+Result network has cut vertice: false
+
+-493-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+1 3
+0 1
+2 4
+3 4
+Result network has cut vertice: false
+
+-494-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+1 3
+0 3
+0 1
+2 4
+Result network has cut vertice: false
+
+-495-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+1 3
+0 3
+0 4
+1 2
+Result network has cut vertice: false
+
+-496-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+1 3
+0 3
+1 2
+1 4
+Result network has cut vertice: false
+
+-497-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+1 3
+0 3
+1 2
+2 4
+Result network has cut vertice: false
+
+-498-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+1 3
+0 3
+1 2
+3 4
+Result network has cut vertice: true
+
+-499-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+1 3
+0 3
+1 3
+2 4
+Result network has cut vertice: false
+
+-500-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+1 3
+0 3
+2 4
+1 2
+Result network has cut vertice: false
+
+-501-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+1 3
+0 3
+2 4
+1 4
+Result network has cut vertice: false
+
+-502-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+0 2
+0 1
+0 4
+Result network has cut vertice: true
+
+-503-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+0 2
+0 1
+1 4
+Result network has cut vertice: false
+
+-504-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+0 2
+0 1
+2 4
+Result network has cut vertice: true
+
+-505-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+0 2
+0 4
+0 1
+Result network has cut vertice: true
+
+-506-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+0 2
+0 4
+1 2
+Result network has cut vertice: false
+
+-507-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+0 2
+0 4
+1 3
+Result network has cut vertice: false
+
+-508-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+0 2
+0 4
+1 4
+Result network has cut vertice: false
+
+-509-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+0 2
+1 2
+1 4
+Result network has cut vertice: false
+
+-510-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+0 2
+1 2
+2 4
+Result network has cut vertice: true
+
+-511-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+0 2
+1 3
+1 4
+Result network has cut vertice: false
+
+-512-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+0 2
+1 3
+2 4
+Result network has cut vertice: false
+
+-513-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+0 2
+1 3
+3 4
+Result network has cut vertice: true
+
+-514-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+0 2
+2 4
+1 2
+Result network has cut vertice: true
+
+-515-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+0 2
+2 4
+1 4
+Result network has cut vertice: false
+
+-516-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+0 2
+3 4
+1 3
+Result network has cut vertice: true
+
+-517-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+0 2
+3 4
+1 4
+Result network has cut vertice: false
+
+-518-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+0 3
+0 1
+0 4
+Result network has cut vertice: true
+
+-519-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+0 3
+0 1
+1 4
+Result network has cut vertice: false
+
+-520-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+0 3
+0 1
+3 4
+Result network has cut vertice: true
+
+-521-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+0 3
+0 4
+0 1
+Result network has cut vertice: true
+
+-522-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+0 3
+0 4
+1 2
+Result network has cut vertice: false
+
+-523-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+0 3
+0 4
+1 3
+Result network has cut vertice: false
+
+-524-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+0 3
+0 4
+1 4
+Result network has cut vertice: false
+
+-525-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+0 3
+1 2
+1 4
+Result network has cut vertice: false
+
+-526-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+0 3
+1 2
+2 4
+Result network has cut vertice: false
+
+-527-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+0 3
+1 2
+3 4
+Result network has cut vertice: true
+
+-528-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+0 3
+1 3
+1 4
+Result network has cut vertice: false
+
+-529-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+0 3
+1 3
+3 4
+Result network has cut vertice: true
+
+-530-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+0 3
+2 4
+1 2
+Result network has cut vertice: false
+
+-531-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+0 3
+2 4
+1 4
+Result network has cut vertice: false
+
+-532-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+0 3
+3 4
+1 3
+Result network has cut vertice: true
+
+-533-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+0 3
+3 4
+1 4
+Result network has cut vertice: false
+
+-534-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+1 2
+0 1
+0 4
+Result network has cut vertice: false
+
+-535-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+1 2
+0 1
+1 4
+Result network has cut vertice: false
+
+-536-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+1 2
+0 1
+2 4
+Result network has cut vertice: true
+
+-537-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+1 2
+0 1
+3 4
+Result network has cut vertice: true
+
+-538-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+1 2
+0 2
+0 4
+Result network has cut vertice: false
+
+-539-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+1 2
+0 2
+1 4
+Result network has cut vertice: false
+
+-540-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+1 2
+0 2
+2 4
+Result network has cut vertice: true
+
+-541-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+1 2
+0 2
+3 4
+Result network has cut vertice: true
+
+-542-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+1 2
+1 2
+0 4
+Result network has cut vertice: false
+
+-543-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+1 2
+1 3
+0 4
+Result network has cut vertice: false
+
+-544-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+1 2
+1 4
+0 1
+Result network has cut vertice: false
+
+-545-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+1 2
+1 4
+0 4
+Result network has cut vertice: false
+
+-546-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+1 2
+2 3
+0 4
+Result network has cut vertice: false
+
+-547-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+1 2
+2 4
+0 2
+Result network has cut vertice: true
+
+-548-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+1 2
+2 4
+0 4
+Result network has cut vertice: false
+
+-549-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+1 2
+3 4
+0 3
+Result network has cut vertice: true
+
+-550-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+1 2
+3 4
+0 4
+Result network has cut vertice: false
+
+-551-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+1 3
+0 1
+0 4
+Result network has cut vertice: false
+
+-552-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+1 3
+0 1
+1 4
+Result network has cut vertice: false
+
+-553-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+1 3
+0 1
+2 4
+Result network has cut vertice: false
+
+-554-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+1 3
+0 1
+3 4
+Result network has cut vertice: true
+
+-555-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+1 3
+0 3
+0 4
+Result network has cut vertice: false
+
+-556-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+1 3
+0 3
+1 4
+Result network has cut vertice: false
+
+-557-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+1 3
+0 3
+2 4
+Result network has cut vertice: false
+
+-558-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+1 3
+0 3
+3 4
+Result network has cut vertice: true
+
+-559-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+1 3
+1 2
+0 4
+Result network has cut vertice: false
+
+-560-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+1 3
+1 3
+0 4
+Result network has cut vertice: false
+
+-561-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+1 3
+1 4
+0 1
+Result network has cut vertice: false
+
+-562-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+1 3
+1 4
+0 4
+Result network has cut vertice: false
+
+-563-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+1 3
+2 3
+0 4
+Result network has cut vertice: false
+
+-564-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+1 3
+2 4
+0 2
+Result network has cut vertice: false
+
+-565-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+1 3
+2 4
+0 4
+Result network has cut vertice: false
+
+-566-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+1 3
+3 4
+0 3
+Result network has cut vertice: true
+
+-567-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+1 3
+3 4
+0 4
+Result network has cut vertice: false
+
+-568-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+2 4
+0 2
+0 1
+Result network has cut vertice: true
+
+-569-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+2 4
+0 2
+1 2
+Result network has cut vertice: true
+
+-570-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+2 4
+0 2
+1 4
+Result network has cut vertice: false
+
+-571-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+2 4
+0 4
+0 1
+Result network has cut vertice: true
+
+-572-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+2 4
+0 4
+1 2
+Result network has cut vertice: false
+
+-573-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+2 4
+0 4
+1 4
+Result network has cut vertice: false
+
+-574-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+2 4
+1 2
+0 1
+Result network has cut vertice: true
+
+-575-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+2 4
+1 2
+0 2
+Result network has cut vertice: true
+
+-576-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+2 4
+1 4
+0 1
+Result network has cut vertice: false
+
+-577-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+2 4
+1 4
+0 4
+Result network has cut vertice: false
+
+-578-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+3 4
+0 3
+0 1
+Result network has cut vertice: true
+
+-579-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+3 4
+0 3
+1 3
+Result network has cut vertice: true
+
+-580-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+3 4
+0 3
+1 4
+Result network has cut vertice: false
+
+-581-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+3 4
+0 4
+0 1
+Result network has cut vertice: true
+
+-582-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+3 4
+0 4
+1 3
+Result network has cut vertice: false
+
+-583-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+3 4
+0 4
+1 4
+Result network has cut vertice: false
+
+-584-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+3 4
+1 3
+0 1
+Result network has cut vertice: true
+
+-585-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+3 4
+1 3
+0 3
+Result network has cut vertice: true
+
+-586-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+3 4
+1 4
+0 1
+Result network has cut vertice: false
+
+-587-
+Processes num: 5
+Syncronizations: 
+0 1
+0 2
+3 4
+2 3
+3 4
+1 4
+0 4
+Result network has cut vertice: false
+
+-588-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 1
+0 2
+0 3
+Result network has cut vertice: true
+
+-589-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 1
+0 2
+1 3
+Result network has cut vertice: true
+
+-590-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 1
+0 2
+2 3
+Result network has cut vertice: true
+
+-591-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 1
+0 2
+3 4
+Result network has cut vertice: true
+
+-592-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 1
+0 3
+0 2
+Result network has cut vertice: true
+
+-593-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 1
+0 3
+1 2
+Result network has cut vertice: true
+
+-594-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 1
+0 3
+2 3
+Result network has cut vertice: true
+
+-595-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 1
+0 3
+2 4
+Result network has cut vertice: true
+
+-596-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 1
+1 2
+1 3
+Result network has cut vertice: true
+
+-597-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 1
+1 2
+2 3
+Result network has cut vertice: true
+
+-598-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 1
+1 2
+3 4
+Result network has cut vertice: false
+
+-599-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 1
+1 3
+1 2
+Result network has cut vertice: true
+
+-600-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 1
+1 3
+2 3
+Result network has cut vertice: true
+
+-601-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 1
+1 3
+2 4
+Result network has cut vertice: false
+
+-602-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 1
+2 4
+2 3
+Result network has cut vertice: true
+
+-603-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 1
+2 4
+3 4
+Result network has cut vertice: true
+
+-604-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 1
+3 4
+2 3
+Result network has cut vertice: true
+
+-605-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 1
+3 4
+2 4
+Result network has cut vertice: true
+
+-606-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 2
+0 1
+0 3
+Result network has cut vertice: true
+
+-607-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 2
+0 1
+1 3
+Result network has cut vertice: true
+
+-608-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 2
+0 1
+2 3
+Result network has cut vertice: true
+
+-609-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 2
+0 1
+3 4
+Result network has cut vertice: true
+
+-610-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 2
+0 3
+0 1
+Result network has cut vertice: true
+
+-611-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 2
+0 3
+1 2
+Result network has cut vertice: true
+
+-612-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 2
+0 3
+1 3
+Result network has cut vertice: true
+
+-613-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 2
+0 3
+1 4
+Result network has cut vertice: true
+
+-614-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 2
+1 2
+1 3
+Result network has cut vertice: true
+
+-615-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 2
+1 2
+2 3
+Result network has cut vertice: true
+
+-616-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 2
+1 2
+3 4
+Result network has cut vertice: false
+
+-617-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 2
+1 4
+1 3
+Result network has cut vertice: false
+
+-618-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 2
+1 4
+2 3
+Result network has cut vertice: true
+
+-619-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 2
+1 4
+3 4
+Result network has cut vertice: false
+
+-620-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 2
+2 3
+1 2
+Result network has cut vertice: true
+
+-621-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 2
+2 3
+1 3
+Result network has cut vertice: true
+
+-622-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 2
+3 4
+1 3
+Result network has cut vertice: false
+
+-623-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 2
+3 4
+1 4
+Result network has cut vertice: false
+
+-624-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 3
+0 1
+0 2
+Result network has cut vertice: true
+
+-625-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 3
+0 1
+1 2
+Result network has cut vertice: true
+
+-626-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 3
+0 1
+2 3
+Result network has cut vertice: true
+
+-627-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 3
+0 1
+2 4
+Result network has cut vertice: true
+
+-628-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 3
+0 2
+0 1
+Result network has cut vertice: true
+
+-629-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 3
+0 2
+1 2
+Result network has cut vertice: true
+
+-630-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 3
+0 2
+1 3
+Result network has cut vertice: true
+
+-631-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 3
+0 2
+1 4
+Result network has cut vertice: true
+
+-632-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 3
+1 3
+1 2
+Result network has cut vertice: true
+
+-633-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 3
+1 3
+2 3
+Result network has cut vertice: true
+
+-634-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 3
+1 3
+2 4
+Result network has cut vertice: false
+
+-635-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 3
+1 4
+1 2
+Result network has cut vertice: false
+
+-636-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 3
+1 4
+2 3
+Result network has cut vertice: true
+
+-637-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 3
+1 4
+2 4
+Result network has cut vertice: false
+
+-638-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 3
+2 3
+1 2
+Result network has cut vertice: true
+
+-639-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 3
+2 3
+1 3
+Result network has cut vertice: true
+
+-640-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 3
+2 4
+1 2
+Result network has cut vertice: false
+
+-641-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+0 3
+2 4
+1 4
+Result network has cut vertice: false
+
+-642-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+1 4
+1 2
+1 3
+Result network has cut vertice: false
+
+-643-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+1 4
+1 2
+2 3
+Result network has cut vertice: true
+
+-644-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+1 4
+1 2
+3 4
+Result network has cut vertice: false
+
+-645-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+1 4
+1 3
+1 2
+Result network has cut vertice: false
+
+-646-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+1 4
+1 3
+2 3
+Result network has cut vertice: false
+
+-647-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+1 4
+1 3
+2 4
+Result network has cut vertice: false
+
+-648-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+1 4
+2 4
+2 3
+Result network has cut vertice: true
+
+-649-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+1 4
+2 4
+3 4
+Result network has cut vertice: false
+
+-650-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+1 4
+3 4
+2 3
+Result network has cut vertice: false
+
+-651-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+1 4
+3 4
+2 4
+Result network has cut vertice: false
+
+-652-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+2 4
+1 2
+1 3
+Result network has cut vertice: false
+
+-653-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+2 4
+1 2
+2 3
+Result network has cut vertice: true
+
+-654-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+2 4
+1 2
+3 4
+Result network has cut vertice: false
+
+-655-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+2 4
+1 4
+1 3
+Result network has cut vertice: false
+
+-656-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+2 4
+1 4
+2 3
+Result network has cut vertice: true
+
+-657-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+2 4
+1 4
+3 4
+Result network has cut vertice: false
+
+-658-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+2 4
+2 3
+1 2
+Result network has cut vertice: true
+
+-659-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+2 4
+2 3
+1 3
+Result network has cut vertice: false
+
+-660-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+2 4
+3 4
+1 3
+Result network has cut vertice: false
+
+-661-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+2 4
+3 4
+1 4
+Result network has cut vertice: false
+
+-662-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+3 4
+1 3
+1 2
+Result network has cut vertice: false
+
+-663-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+3 4
+1 3
+2 3
+Result network has cut vertice: false
+
+-664-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+3 4
+1 3
+2 4
+Result network has cut vertice: false
+
+-665-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+3 4
+1 4
+1 2
+Result network has cut vertice: false
+
+-666-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+3 4
+1 4
+2 3
+Result network has cut vertice: false
+
+-667-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+3 4
+1 4
+2 4
+Result network has cut vertice: false
+
+-668-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+3 4
+2 3
+1 2
+Result network has cut vertice: false
+
+-669-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+3 4
+2 3
+1 3
+Result network has cut vertice: false
+
+-670-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+3 4
+2 4
+1 2
+Result network has cut vertice: false
+
+-671-
+Processes num: 5
+Syncronizations: 
+0 1
+2 3
+0 2
+0 4
+3 4
+2 4
+1 4
+Result network has cut vertice: false
+
+Count of non isomorphic graphs (of dim 2): 672 isomorphic count: 2356
