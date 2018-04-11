@@ -12,7 +12,7 @@
 using namespace std;
 
 int main(int argc, char* argv[]) {
-    cout << "Generate flat grid (+1, +2) (unbounded cache opt)" << endl;
+    cout << "Generate flat grid (unbounded cache optimization)" << endl;
 
     if (argc < 3) {
         cerr << "Usage: exec <proc_num> <max_depth>" << endl;
@@ -39,7 +39,7 @@ int main(int argc, char* argv[]) {
                 }
 
                 if (!iso) {
-                    cout << "-" << isocount++ << "-" << endl;
+                    isocount++;
                     result_processes.push_back(g);
                     cout << g << endl;
                 }
@@ -60,24 +60,14 @@ int main(int argc, char* argv[]) {
         }
 
         if (!is_poset_2_dimensional(g)) {
-            cerr << "Some flat poset is not 2-dimensional" << endl;
-            cerr << g << endl;
+            cerr << "Some falt poset is not 2-dimensional" << endl;
         }
 
-        for (int i = 0; i < g.proc_num; ++i) {
+        for (int i = 0; i < g.proc_num - 1; ++i) {
             auto ng = g;
-            if(i + 1 < g.proc_num)
-                ng.sync(i, i + 1);
+            ng.sync(i, i + 1);
             generate(ng, depth + 1);
         }
-
-        for (int i = 0; i < g.proc_num; ++i) {
-            auto ng = g;
-            if (i + 2 < g.proc_num)
-                ng.sync(i, i + 2);
-            generate(ng, depth + 1);
-        }
-
     };
 
     ProcessesGraph g;
