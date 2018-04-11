@@ -1,0 +1,600 @@
+Generate flat grid (+1, +2) (unbounded cache opt)
+-0-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+2 3
+3 4
+4 5
+3 4
+2 3
+1 2
+0 1
+
+-1-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+2 3
+3 4
+4 5
+3 4
+2 3
+1 2
+0 2
+
+-2-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+2 3
+3 4
+4 5
+3 4
+2 3
+1 3
+0 1
+
+-3-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+2 3
+3 4
+4 5
+3 4
+2 4
+1 2
+0 1
+
+-4-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+2 3
+3 4
+4 5
+3 4
+2 4
+1 2
+0 2
+
+-5-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+2 3
+3 4
+4 5
+3 5
+2 3
+1 2
+0 1
+
+-6-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+2 3
+3 4
+4 5
+3 5
+2 3
+1 2
+0 2
+
+-7-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+2 3
+3 4
+4 5
+3 5
+2 3
+1 3
+0 1
+
+-8-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+2 3
+3 4
+3 5
+3 4
+2 3
+1 2
+0 1
+
+-9-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+2 3
+3 4
+3 5
+3 4
+2 3
+1 2
+0 2
+
+-10-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+2 3
+3 4
+3 5
+3 4
+2 3
+1 3
+0 1
+
+-11-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+2 3
+3 4
+3 5
+3 4
+2 4
+1 2
+0 1
+
+-12-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+2 3
+3 4
+3 5
+3 4
+2 4
+1 2
+0 2
+
+-13-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+2 3
+3 4
+3 5
+4 5
+2 4
+1 2
+0 1
+
+-14-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+2 3
+3 4
+3 5
+4 5
+2 4
+1 2
+0 2
+
+-15-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+2 3
+4 5
+3 4
+2 3
+1 2
+0 1
+4 5
+
+-16-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+2 3
+4 5
+3 4
+2 3
+1 2
+4 5
+0 2
+
+-17-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+2 3
+4 5
+3 4
+2 3
+4 5
+1 3
+0 1
+
+-18-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+2 3
+4 5
+3 4
+2 4
+1 2
+0 1
+3 5
+
+-19-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+2 3
+4 5
+3 4
+2 4
+1 2
+0 2
+3 5
+
+-20-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+2 3
+4 5
+2 4
+2 3
+1 2
+0 1
+4 5
+
+-21-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+2 3
+4 5
+2 4
+2 3
+1 2
+4 5
+0 2
+
+-22-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+2 3
+4 5
+2 4
+2 3
+4 5
+1 3
+0 1
+
+-23-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+2 3
+2 4
+4 5
+2 4
+2 3
+1 2
+0 1
+
+-24-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+2 3
+2 4
+4 5
+2 4
+2 3
+1 2
+0 2
+
+-25-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+2 3
+2 4
+4 5
+2 4
+2 3
+1 3
+0 1
+
+-26-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+2 3
+2 4
+4 5
+2 4
+3 4
+1 3
+0 1
+
+-27-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+3 4
+4 5
+2 4
+1 2
+0 1
+4 5
+3 4
+
+-28-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+3 4
+4 5
+2 4
+1 2
+0 1
+4 5
+3 5
+
+-29-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+3 4
+4 5
+2 4
+1 2
+4 5
+3 4
+0 2
+
+-30-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+3 4
+4 5
+2 4
+1 2
+4 5
+0 2
+3 5
+
+-31-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+1 3
+3 4
+4 5
+3 4
+1 3
+1 2
+0 1
+
+-32-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+1 3
+3 4
+4 5
+3 4
+1 3
+1 2
+0 2
+
+-33-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+1 3
+3 4
+4 5
+3 4
+1 3
+2 3
+0 2
+
+-34-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+1 3
+3 4
+4 5
+3 5
+1 3
+1 2
+0 1
+
+-35-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+1 3
+3 4
+4 5
+3 5
+1 3
+1 2
+0 2
+
+-36-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+1 3
+3 4
+4 5
+3 5
+1 3
+2 3
+0 2
+
+-37-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+1 3
+3 4
+3 5
+3 4
+1 3
+1 2
+0 1
+
+-38-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+1 3
+3 4
+3 5
+3 4
+1 3
+1 2
+0 2
+
+-39-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+1 3
+3 4
+3 5
+3 4
+1 3
+2 3
+0 2
+
+-40-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+1 3
+4 5
+3 4
+4 5
+1 3
+1 2
+0 1
+
+-41-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+1 3
+4 5
+3 4
+4 5
+1 3
+1 2
+0 2
+
+-42-
+Processes num: 6
+Syncronizations: 
+0 1
+1 2
+1 3
+4 5
+3 4
+4 5
+1 3
+2 3
+0 2
+
+-43-
+Processes num: 6
+Syncronizations: 
+0 1
+2 3
+3 4
+3 5
+1 3
+0 1
+3 5
+3 4
+2 3
+
+-44-
+Processes num: 6
+Syncronizations: 
+0 1
+2 3
+3 4
+3 5
+1 3
+0 1
+3 5
+3 4
+2 4
+
+-45-
+Processes num: 6
+Syncronizations: 
+0 1
+2 3
+3 4
+3 5
+1 3
+0 1
+3 5
+4 5
+2 4
+
+Count of nonisomorphic executions: 46
