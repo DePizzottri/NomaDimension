@@ -18,7 +18,8 @@ namespace bf = boost::fibers;
 using allocator_type = boost::fibers::fixedsize_stack;
 
 //const uint32_t max_cache_size =   1000000; //~295Mb
-const uint32_t max_cache_size =     40000000; //~Mb
+//const uint32_t max_cache_size =     40000000; //12.3Gb
+const uint32_t max_cache_size =       80000000; //24.3Gb
 //const uint32_t max_cache_size =     100000000; //>30~Gb
 //const uint32_t max_cache_size =     400000000; //Gb
 
